@@ -1,0 +1,93 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo" [backButton]="false" [adjudibot]="true" [titulo]=titulo></app-header-generico>
+
+
+  <ion-grid [fixed]="true">
+    <ion-row (click)="navigateTo(1)" >
+      <ion-col size="11">
+        <ion-label>{{ 'PROFILE.EDITAR' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!isGoogleUser.google" (click)="navigateTo(2)">
+      <ion-col size="11">
+        <ion-label>{{ 'PROFILE.CONTRASENYA' | translate}}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <!--
+    <ion-row>
+      <ion-col size="11">
+        <ion-label>{{ 'PROFILE.IDIOMA' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    -->
+    <ion-row (click)="navigateTo(3)" *ngIf="codiRol === 'ADM'">
+      <ion-col size="11">
+        <ion-label>{{ 'PROFILE.USUARIS' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row (click)="navigateTo(4)" *ngIf="codiRol === 'OP' || codiRol === 'ADM'">
+      <ion-col size="11">
+        <ion-label>{{'PROFILE.VAL_REBUDES' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row (click)="navigateTo(5)" *ngIf="codiRol === 'EP' || codiRol === 'ADM'">
+      <ion-col size="11">
+        <ion-label>{{'PROFILE.VAL_REALITZADES' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row (click)="navigateTo(6)">
+      <ion-col size="11">
+        <ion-label>{{'PROFILE.GOOGLE' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <!--
+    <ion-row>
+      <ion-col size="11">
+        <ion-label>{{'PROFILE.SEGURETAT' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    -->
+    <ion-row (click)="navigateTo(8)">
+      <ion-col size="11">
+        <ion-label>AdjudiBot</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row (click)="navigateTo(9)">
+      <ion-col size="11">
+        <ion-label>{{'PROFILE.TANCAR' | translate }}</ion-label>
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<app-menu [filled]="5" class="menu"></app-menu>

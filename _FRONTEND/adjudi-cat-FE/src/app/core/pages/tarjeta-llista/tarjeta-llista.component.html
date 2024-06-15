@@ -1,0 +1,15 @@
+<ion-card class="estilTarjeta">
+  <ion-card-content>
+    <ion-card-title> {{ nom }}</ion-card-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>{{numLicitacions}} {{ 'TARJETA_LLISTA.LICITACIONS_MIN' | translate }}</ion-label>
+        </ion-col>
+        <ion-col class="icona">
+          <ion-icon name={{icono}} size="large" [color]="tipus === 1 ? 'danger' : 'black'"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

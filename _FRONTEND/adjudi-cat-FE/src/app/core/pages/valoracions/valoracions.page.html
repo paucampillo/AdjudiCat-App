@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]="titol"></app-header-generico>
+
+  <div *ngIf="valoracions && valoracions.length !== 0 && puntuacioMitjana" class="mitjana">
+    <ion-label class="puntuacio-mitjana">{{ puntuacioMitjana }}</ion-label><br>
+    <ion-icon *ngFor="let star of valoracioMitjanaEntera" name="star" color="warning"></ion-icon>
+    <ion-icon *ngIf="valoracioMitjanaDecimal > 0" name="star-half" color="warning"></ion-icon>
+  </div>
+
+  <ion-label *ngIf="valoracions && valoracions.length === 0" lines="none">
+    <p class="resultatNoValoracions">{{missatgeNoValoracions}}</p>
+  </ion-label>
+  <div class="valoracions-container" *ngIf="valoracions">
+    <ion-list lines="none" class="custom-list">
+      <ion-item *ngFor="let valoracio of valoracions">
+        <app-tarjeta-valoracions class="app-tarjeta-valoracions" [valoracio]="valoracio" [tipus]="titol" (esborrarValoracioEvent)="reloadValoracions()"></app-tarjeta-valoracions>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll *ngIf="page < totalPages" (ionInfinite)="loadValoracions($event, true)" class="custom-infinite-scroll">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más contratos...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+
+</ion-content>

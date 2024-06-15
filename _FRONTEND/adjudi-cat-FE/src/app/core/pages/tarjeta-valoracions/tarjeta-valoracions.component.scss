@@ -1,0 +1,42 @@
+ion-card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ion-label {
+  font-size: 12px;
+  color: black;
+}
+
+ion-card-content {
+  padding: 10px;
+}
+
+.valoracio {
+  border-radius: 10px;
+  background: #F5F5F5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 15px;
+}
+
+.valoracio-usuari {
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.valoracio-info {
+  font-size: 12px;
+  color: black;
+}
+
+.valoracio-data {
+  font-size: 12px;
+  color: #8c8c8c;
+  text-align: right;
+}
+
+.bin {
+  text-align: right;
+  align-content: flex-end;
+}

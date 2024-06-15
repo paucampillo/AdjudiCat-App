@@ -1,0 +1,25 @@
+ion-button {
+  --ion-color-base: #c00000;
+  text-transform: none;
+  --ion-border-radius: 20px;
+}
+
+
+ion-input {
+  color: white;
+}
+
+.bIniciarSessio {
+  background: #c00000;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.bGoogle {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //height: 50px; /* Calcula la altura para centrar verticalmente el contenedor */
+}
+

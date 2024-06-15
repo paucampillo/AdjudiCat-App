@@ -1,0 +1,266 @@
+{
+  "ALERTES": {
+    "ACTUALITZA": "Actualitza",
+    "AFEGIR": "Añadir evento",
+    "AUTORITZA": "Autoriza",
+    "CREAR": "Crear evento",
+    "DATA_FI": "Fecha final",
+    "DATA_INI": "Fecha inicio",
+    "DESCRIPCIO": "Descripción",
+    "HORA_FI": "Hora final",
+    "HORA_INI": "Hora inicio",
+    "MESSAGE": "Cargando calendario ...",
+    "NOM": "Nombre",
+    "SURT": "Salir",
+    "TITOL": "Alertas",
+    "UBICACIO": "Ubicación"
+  },
+  "CHAT_MENSAJES": {
+    "ESCRIU_MISSATGE": "Escribe un mensaje..."
+  },
+  "COMUNS": {
+    "ACCEPTAR": "De acuerdo",
+    "CANCELAR": "Cancelar",
+    "CARREGANT_CONTRACTES": "Cargando más contratos...",
+    "CONFIRMACIÓ": "Confirmación",
+    "CONFIRMAR": "Confirmar",
+    "ESBORRA": "Borrar"
+  },
+  "CONTACTOS_MENSAJES": {
+    "BUSCAR_CONTACTE": "Busca contacto",
+    "MISSATGE_LLISTA_CONTACTES_BUIT": "No hay ningún contacto de mensajes"
+  },
+  "HOME": {
+    "BUSCAR": "Busca licitaciones",
+    "CONTRACTE" : {
+      "DURADA_CONTRACTE": "Duración del contrato",
+      "ENLLAC_PUBLICACIO": "Enlace de la publicación",
+      "ESBORRAR_CONTRACTE": "Borrar contrato",
+      "LICITAR": "Licitar",
+      "MISSATGE_FALTA_PUNTUACIO": "No puedes crear una valoración sin puntuación. Por favor, añade una puntuación para continuar.",
+      "OFERTES": "ofertas",
+      "PRESSUPOST": "Presupuesto",
+      "SENSE_IVA": "sin IVA",
+      "SOBRE_EMPRESA": "Sobre la empresa",
+      "SUBTIPUS_CONTRACTE": "Subtipo contrato",
+      "TERMINI_PRESENTACIO_OFERTES": "Plazo presentación de ofertas",
+      "VALORA_EMPRESA_BOTO": "Valora la empresa",
+      "VALORA_EMPRESA": {
+        "INDICA_PUNTUACIO": "Indica la puntuación (1 bajo, 5 alto)*",
+        "INTRODUEIX_VALORACIO": "Introduce tu valoración",
+        "OPINIO": "¿Qué te ha parecido la empresa ",
+        "VALORA": "Valora",
+        "VALORACIO_FETA": "Ya tienes una valoración hecha para esta empresa. Si quieres, puedes modificar lo que has puesto."
+      }
+    },
+    "FILTRES": {
+      "ALTRA_LEGISLACIO_SECTORIAL": "Otra Legislación Sectorial",
+      "ALTRES_ENS": "Otros Entes",
+      "ALTRES_PROCEDIMENTS_SENSE_INSTRUCCIONS_INTERNES": "Otros Procedimientos Sin Instrucciones Internas",
+      "AMBIT": "Ámbito",
+      "CODI_EXPEDIENT": "Código expediente",
+      "CONCESSIO_SERVEIS": "Concesión de Servicios",
+      "CONCURS_PROJECTES": "Concurso de Proyectos",
+      "CONTRACTE_BASAT_ACORD_MARC": "Contrato Basado en Acuerdo marco",
+      "CONTRACTE_MENOR": "Contrato Menor",
+      "DEPARTAMENTS_I_SECTOR_PUBLIC_GENERALITAT": "Departamentos y Sector Público de la Generalitat de Cataluña",
+      "ENTITATS_ADM_LOCAL": "Entidades de la Administración Local",
+      "ESBORRAR_FILTRES": "Borrar filtros",
+      "GESTIO_SERVEIS_PUBLICS": "Gestión de Servicios Públicos",
+      "INSTITUCIONS_I_ORGANS_ESTATUTARIS": "Instituciones y Órganos Estatutarios",
+      "INTRODUIR_CODI": "Introduce el código",
+      "INTRODUIR_LLOC": "Introduce el lugar",
+      "INTRODUIR_OBJECTE": "Introduce el objeto",
+      "INTRODUIR_VALOR": "Introduce el valor",
+      "LICITACIO_NEGOCIACIO": "Licitación con Negociación",
+      "LLOC_EXECUCIO": "Lugar ejecución",
+      "NEGOCIAT_SENSE_PUBLICITAT": "Negociado Sin Publicidad",
+      "OBERT": "Abierto",
+      "OBJECTE_CONTRACTE": "Objeto contrato",
+      "OBRES": "Obras",
+      "ORDENAT_PER": "Ordenado por",
+      "PRIVAT_ADMINISTRACIO_PUBLICA": "Privado de Administración Pública",
+      "PROCEDIMENT": "Procedimiento",
+      "RESTRINGIT": "Restringido",
+      "SELECCIONAR_TIPUS": "Seleccionar tipo",
+      "SERVEIS": "Servicios",
+      "SUBMINISTRAMENTS": "Suministros",
+      "TIPUS_CONTRACTE": "Tipo contrato",
+      "TITOL_FILTRES": "Filtros",
+      "UNIVERSITATS": "Universidades",
+      "VALOR_CONTRACTE": "Valor contrato",
+      "VEURE_RESULTATS": "Ver resultados"
+    },
+    "LICITAR": {
+      "IMPORT": "Importe",
+      "LICITA": "¡Licita!",
+      "LICITA_PER": "Licita por",
+      "MES_BAIXA": "Licitación más baja",
+      "NUMLICITACIONS": "Nº licitaciones",
+      "ULTIMES_LICITACIONS": "Últimas licitaciones"
+    },
+    "MISSATGE_RESULTAT_FILTRE_BUIT": "No hay ningún resultado disponible con los filtros aplicados.",
+    "PUJAR": "Subir contrato",
+    "TITOL": "Buscador de licitaciones"
+  },
+  "LICITACIONS" : {
+    "CREADES_OBERTES_MISSATGE_BUIT": "No hay ninguna licitación creada con periodo de solicitud abierto.",
+    "CREADES_OBERTES_TITOL": "Licitaciones creadas abiertas",
+    "CREADES_TANCADES_MISSATGE_BUIT": "No hay ninguna licitación creada con periodo de solicitud cerrada.",
+    "CREADES_TANCADES_TITOL": "Licitaciones creadas cerradas",
+    "INSCRITES_OBERTES_MISSATGE_BUIT": "No hay ninguna licitación inscrita con periodo de solicitud abierto.",
+    "INSCRITES_OBERTES_TITOL": "Licitaciones inscritas abiertas",
+    "INSCRITES_TANCADES_MISSATGE_BUIT": "No hay ninguna licitación inscrita con periodo de solicitud cerrada.",
+    "INSCRITES_TANCADES_TITOL": "Licitaciones inscritas cerradas",
+    "PREFERIDES_MISSATGE_BUIT": "No hay ninguna licitación preferida.",
+    "PREFERIDES_TITOL": "Licitaciones preferidas",
+    "TITOL": "Mis licitaciones"
+  },
+  "MENU": {
+    "ALERTES": "Alertas",
+    "BUSCADOR": "Buscador",
+    "LICITACIONS": "Licitaciones",
+    "MISSATGES": "Mensajes",
+    "PERFIL": "Perfil"
+  },
+  "MAPS": {
+    "CANCEL": "Cancelar",
+    "SUBTITOL_UBI": "Mi ubicación",
+    "TITOL": "Mapa de licitaciones",
+    "TITOL_UBI": "Ubicación actual"
+  },
+  "MISSATGES_CONFIRMACIONS": {
+    "CONFIRMACIO_ESBORRAR_CONTRACTE": "El contrato ha sido eliminado con éxito.",
+    "CONFIRMACIO_LICITACIO_REALITZADA": "Su licitación ha sido realizada con éxito.",
+    "CONFIRMACIO_VALORACIO_CREADA": "Su valoración ha sido creada con éxito.",
+    "CONFIRMACIO_VALORACIO_ESBORRADA": "Su valoración ha sido eliminada con éxito.",
+    "CONFIRMACIO_VALORACIO_MODIFICADA": "Su valoración ha sido modificada con éxito.",
+    "PREGUNTA_CONFIRMAR_ESBORRAR_CONTRACTE": "¿Estás seguro/a que deseas borrar este contrato?",
+    "PREGUNTA_CONFIRMAR_ESBORRAR_VALORACIO": "¿Estás seguro/a que deseas borrar esta valoración?",
+    "PREGUNTA_CONFIRMAR_LICITAR": "¿Estás seguro/a de licitar por ",
+    "PREGUNTA_CONFIRMAR_VALORACIO": "¿Estás seguro/a que deseas guardar esta valoración?"
+  },
+  "PERFIL_EXTERN": {
+    "CARREGAR": "Cargando más contratos ...",
+    "FILTRE_BUIT": "No hay contratos para este usuario",
+    "MISSATGE": "Enviar mensaje",
+    "VEURE": "Ver las valoraciones recibidas"
+  },
+  "PROFILE": {
+    "CONFIRMAR": "Confirmar",
+    "CONFIRMACIO": "Confirmación",
+    "CONTRASENYA": "Cambiar contraseña",
+    "DESAR": "Guardar",
+    "EDITAR": "Editar datos del perfil",
+    "GOOGLE": "Cuenta de Google",
+    "IDIOMA": "Seleccionar idioma",
+    "MISSATGE": "¿Estás seguro/a que deseas cerrar la sesión?",
+    "MISSATGE2": "Los datos se han modificado con éxito.",
+    "SEGURETAT": "Seguridad",
+    "TANCAR": "Cerrar sesión",
+    "TITOL": "Mi perfil",
+    "USUARIS": "Gestión de usuarios",
+    "VAL_REALITZADES": "Valoraciones realizadas",
+    "VAL_REBUDES": "Valoraciones recibidas"
+  },
+  "PROFILE-EDIT": {
+    "CANCEL": "Cancela en cualquier momento",
+    "CORREU": "Correo electrónico *",
+    "CP": "Código postal",
+    "DESA": "Guardar",
+    "DESCRIPCIO": "Descripción",
+    "DIRECCIO": "Dirección",
+    "IDIOMA": "Idioma *",
+    "NOM": "Nombre de la empresa *",
+    "NOTIFICACIONS": "Notificaciones por la app",
+    "MISSATGE": "¿Estás seguro/a que deseas modificar los datos?",
+    "OP": "Órgano público",
+    "ORGAN": "Nombre del órgano",
+    "PAIS": "País",
+    "SELECT_LANG": "Selecciona un idioma",
+    "SELECT_NOM": "Introduce el nombre de la empresa",
+    "SELECT_ORGAN": "Selecciona tu órgano",
+    "TELEFON": "Teléfono",
+    "TITOL": "Edita tus datos",
+    "WEB": "Web"
+  },
+  "PROFILE-GOOGLE": {
+    "CALENDAR": "Actualmente tienes vinculada tu cuenta de Google Calendar",
+    "GOOGLE": "Actualmente tu cuenta de Adjudi-Cat está vinculada con Google",
+    "MISSATGE": "¿Estás seguro/a que deseas desvincular la cuenta de Google Calendar?",
+    "NOGOOGLE": "No hay ninguna cuenta de Google vinculada",
+    "NOTA": "Al desvincular, tendrás que volver a iniciar sesión",
+    "TITOL": "Cuenta de Google"
+  },
+  "PROFILE-PWD": {
+    "ACTUAL": "Contraseña actual",
+    "CANVIAR": "Cambiar contraseña",
+    "ERROR": "Error",
+    "ERROR1": "Las contraseñas no coinciden",
+    "MESSAGE": "¿Estás seguro/a que deseas modificar la contraseña?",
+    "MESSAGE2": "La contraseña se ha modificado correctamente",
+    "NOVA": "Nueva contraseña",
+    "RENOVA": "Repite la nueva contraseña",
+    "TITOL": "Cambiar contraseña"
+  },
+  "PROFILE-US": {
+    "CERCAR": "Buscar usuarios",
+    "MISSATGE": "No se han encontrado usuarios",
+    "TITOL": "Gestión de usuarios",
+    "NOM": "Nombre usuario",
+    "ESTAT": "Estado"
+  },
+  "PUBLICAR_CONTRACTE": {
+    "ANYS": "Años",
+    "DIES": "Días",
+    "DURACIO": "Duración",
+    "INTRODUIR_PRESSUPOST": "Introduce el presupuesto",
+    "INTRODUEIX_URL": "Introduce la URL",
+    "INTRODUIR_VALOR_ESTIMAT": "Introduce el valor estimado",
+    "LOTS": "Lotes",
+    "MESOS": "Meses",
+    "NOM_SUBTIPUS_CONTRACTE": "Nombre del subtipo de contrato",
+    "NOM_LOT": "Nombre del lote",
+    "NUM_ANYS": "#años",
+    "NUM_DIES": "#días",
+    "NUM_MESOS": "#meses",
+    "PUBLICAR": "Publicar",
+    "SELECCIONAR_SUBTIPUS_CONTRACTE": "Seleccionar tu subtipo de contrato",
+    "SELECCIONAR_ID_AMBIT": "Seleccionar ID del ámbito",
+    "SELECCIONAR_LOT": "Selecciona tu lote",
+    "SELECCIONAR_TIPUS_RESULTAT": "Selecciona el tipo de resultado",
+    "TERMINI": "Plazo",
+    "TIPUS_PROCEDIMENT": "Tipo de procedimento",
+    "TIPUS_RESULTAT": "Tipo de resultado",
+    "URL_CONTRACTE": "URL del contrato",
+    "VALOR_ESTIMAT": "Valor estimado"
+  },
+  "TARJETA_CONTRACTE": {
+    "FINS": "Hasta"
+  },
+  "TARJETA_EMPRESA": {
+    "LICITACIONS_ACTIVES": "licitaciones activas.",
+    "OPINIONS": "Opiniones",
+    "TE": "Tiene",
+    "VALORACIO": "Valoración"
+  },
+  "TARJETA_LLISTA": {
+    "LICITACIONS_MIN": "licitaciones"
+  },
+  "TARJETA_PERFIL": {
+    "CORREU_ELECTRONIC": "Correo electrónico",
+    "TELEFON": "Teléfono",
+    "WEB": "Web"
+  },
+  "TARJETA_VALORACIONS": {
+    "FETA_A": "Hecha a",
+    "FETA_PER": "Hecha por"
+  },
+  "VALORACIONS": {
+    "MISSATGE_NO_VALORACIONS_ORGAN": "No ha recibido ninguna valoración.",
+    "MISSATGE_NO_VALORACIONS_REALITZADES": "No has realizado ninguna valoración",
+    "MISSATGE_NO_VALORACIONS_REBUDES": "No has recibido ninguna valoración",
+    "TITOL_REALITZADES": "Valoraciones realizadas",
+    "TITOL_REBUDES": "Valoraciones recibidas"
+  }
+}

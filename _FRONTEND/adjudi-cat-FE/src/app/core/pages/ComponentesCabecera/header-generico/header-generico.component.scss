@@ -1,0 +1,39 @@
+.header {
+  background-size: 100% 100%;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+ion-toolbar {
+  --background: transparent;
+}
+
+ion-back-button {
+  color: black;
+}
+
+.back-button-image {
+  width: 70%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.icono-flecha {
+  color: black;
+  font-size: 10vw;
+}

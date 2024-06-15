@@ -1,0 +1,54 @@
+ion-header {
+  ion-toolbar {
+    --background: #eb445a;
+
+    ion-button {
+      --color: white;
+    }
+  }
+  margin-bottom: 20px;
+}
+
+
+ion-label {
+  font-size: 15px;
+  line-height: 22px;
+  color: black;
+  font-weight: bold;
+}
+
+.valoracio-feta {
+  font-size: 12px;
+  line-height: 22px;
+  color: black;
+  font-weight: lighter;
+  margin: 30px;
+}
+
+ion-input {
+  margin-bottom: 15px;
+}
+
+ion-radio-group {
+  ion-row {
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-left: 15px;
+
+    ion-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      ion-radio {
+        --border-color: #eb445a;
+        --border-width: 2px;
+        --border-style: solid;
+        --border-radius: 50%;
+        --color-checked: #eb445a;
+        --background-checked: #eb445a;
+      }
+    }
+  }
+}

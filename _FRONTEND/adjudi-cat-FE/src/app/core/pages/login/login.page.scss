@@ -1,0 +1,126 @@
+/*
+Ionic Modules
+*/
+
+ion-content {
+  --padding-top: 60%;
+  --padding-top-md: 35%;
+  --padding-top-lg: 60%;
+  --padding-top-sm: 35%;
+  --padding-start: 10%;
+  --padding-end: 10%;
+  --background: #fff;
+
+  @media (min-height: 500px) and (max-height: 700px) { // sm
+    --padding-top: 35%;
+  }
+
+  @media (min-height: 701px) and (max-height: 900px) { // md
+    --padding-top: 53%;
+  }
+
+  @media (min-height: 901px) and (max-height: 999px) { // lg
+    --padding-top: 60%;
+  }
+
+  @media (min-height: 1000px) { // xl
+    --padding-top: 44%;
+  }
+
+  @media (min-width: 500px) and (min-height: 700px) { // sm
+    --padding-top: 32%;
+  }
+
+  @media (min-width: 700px) and (min-height: 1000px) { // sm
+  --padding-top: 44%;
+}
+}
+
+ion-button {
+  --ion-color-base: #c00000;
+  text-transform: none;
+  --ion-border-radius: 20px;
+}
+
+ion-item {
+  --ion-item-background: #999999;
+
+}
+
+ion-input {
+  color: white;
+}
+
+/*
+Module classes
+*/
+
+
+.iGencat img {
+  width: 100%;
+  height: auto;
+  position: fixed;
+}
+
+.iAdjudicat img {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.input-group {
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  margin-top: 100px;
+}
+
+.bIniciarSessio {
+  background: #c00000;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.componentRegistrat {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.lNotensCompte {
+  color: black;
+
+}
+
+.lRegistrat {
+  margin-bottom: 15px;
+  color: #c00000;
+  padding-left: 10px;
+  cursor: pointer; /* Esto cambia el cursor al pasar sobre el elemento */
+}
+
+.lRegistrat:hover {
+  text-decoration: underline; /* Añade un subrayado al pasar el mouse */
+}
+
+.bGoogle {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //height: 50px; /* Calcula la altura para centrar verticalmente el contenedor */
+}
+
+
+
+
+.error-message {
+  font-size: small;
+  color: darkgrey;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}

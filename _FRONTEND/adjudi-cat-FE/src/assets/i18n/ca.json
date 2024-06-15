@@ -1,0 +1,266 @@
+{
+  "ALERTES": {
+    "ACTUALITZA": "Actualitza",
+    "AFEGIR": "Afegir esdeveniment",
+    "AUTORITZA": "Autoritza",
+    "CREAR": "Crear esdeveniment",
+    "DATA_FI": "Data fi",
+    "DATA_INI": "Data inici",
+    "DESCRIPCIO": "Descripció",
+    "HORA_FI": "Hora fi",
+    "HORA_INI": "Hora inici",
+    "MESSAGE": "Carregant calendari ...",
+    "NOM": "Nom",
+    "SURT": "Surt",
+    "TITOL": "Alertes",
+    "UBICACIO": "Ubicació"
+  },
+  "CHAT_MENSAJES": {
+    "ESCRIU_MISSATGE": "Escriu un missatge..."
+  },
+  "COMUNS": {
+    "ACCEPTAR": "D'acord",
+    "CANCELAR": "Cancel·lar",
+    "CARREGANT_CONTRACTES": "Carregant més contractes...",
+    "CONFIRMACIÓ": "Confirmació",
+    "CONFIRMAR": "Confirmar",
+    "ESBORRA": "Esborrar"
+  },
+  "CONTACTOS_MENSAJES": {
+    "BUSCAR_CONTACTE": "Cerca contacte",
+    "MISSATGE_LLISTA_CONTACTES_BUIT": "No hi ha cap contacte de missatges"
+  },
+  "HOME": {
+    "BUSCAR": "Cerca licitacions",
+    "CONTRACTE" : {
+      "DURADA_CONTRACTE": "Durada del contracte",
+      "ENLLAC_PUBLICACIO": "Enllaç de la publicació",
+      "ESBORRAR_CONTRACTE": "Esborrar contracte",
+      "LICITAR": "Licitar",
+      "MISSATGE_FALTA_PUNTUACIO": "No pots crear una valoració sense puntuació. Si us plau, afegeix una puntuació per continuar.",
+      "OFERTES": "ofertes",
+      "PRESSUPOST": "Pressupost",
+      "SENSE_IVA": "sense IVA",
+      "SOBRE_EMPRESA": "Sobre l'empresa",
+      "SUBTIPUS_CONTRACTE": "Subtipus contracte",
+      "TERMINI_PRESENTACIO_OFERTES": "Termini presentació d'ofertes",
+      "VALORA_EMPRESA_BOTO": "Valora l'empresa",
+      "VALORA_EMPRESA": {
+        "INDICA_PUNTUACIO": "Indica la puntuació (1 baix, 5 alt)*",
+        "INTRODUEIX_VALORACIO": "Introdueix la teva valoració",
+        "OPINIO": "Què t'ha semblat l'empresa ",
+        "VALORA": "Valora",
+        "VALORACIO_FETA": "Ja tens una valoració feta per aquesta empresa. Si vols, pots modificar el que has posat."
+      }
+    },
+    "FILTRES": {
+      "ALTRA_LEGISLACIO_SECTORIAL": "Altra Legislació Sectorial",
+      "ALTRES_ENS": "Altres Ens",
+      "ALTRES_PROCEDIMENTS_SENSE_INSTRUCCIONS_INTERNES": "Altres Procediments Sense Instruccions Internes",
+      "AMBIT": "Àmbit",
+      "CODI_EXPEDIENT": "Codi expedient",
+      "CONCESSIO_SERVEIS": "Concessió de Serveis",
+      "CONCURS_PROJECTES": "Concurs de Projectes",
+      "CONTRACTE_BASAT_ACORD_MARC": "Contracte Basat en Acord Marc",
+      "CONTRACTE_MENOR": "Contracte Menor",
+      "DEPARTAMENTS_I_SECTOR_PUBLIC_GENERALITAT": "Departaments i Sector Públic de la Generalitat de Catalunya",
+      "ENTITATS_ADM_LOCAL": "Entitats de l'Administració Local",
+      "ESBORRAR_FILTRES": "Esborrar filtres",
+      "GESTIO_SERVEIS_PUBLICS": "Gestió de Serveis Públics",
+      "INSTITUCIONS_I_ORGANS_ESTATUTARIS": "Institucions i Òrgans Estatutaris",
+      "INTRODUIR_CODI": "Introdueix el codi",
+      "INTRODUIR_LLOC": "Introdueix el lloc",
+      "INTRODUIR_OBJECTE": "Introdueix l'objecte",
+      "INTRODUIR_VALOR": "Introdueix el valor",
+      "LICITACIO_NEGOCIACIO": "Licitació amb Negociació",
+      "LLOC_EXECUCIO": "Lloc execució",
+      "NEGOCIAT_SENSE_PUBLICITAT": "Negociat Sense Publicitat",
+      "OBERT": "Obert",
+      "OBJECTE_CONTRACTE": "Objecte contracte",
+      "OBRES": "Obres",
+      "ORDENAT_PER": "Ordenat per",
+      "PRIVAT_ADMINISTRACIO_PUBLICA": "Privat d'Administració Pública",
+      "PROCEDIMENT": "Procediment",
+      "RESTRINGIT": "Restringit",
+      "SELECCIONAR_TIPUS": "Seleccionar tipus",
+      "SERVEIS": "Serveis",
+      "SUBMINISTRAMENTS": "Subministraments",
+      "TIPUS_CONTRACTE": "Tipus contracte",
+      "TITOL_FILTRES": "Filtres",
+      "UNIVERSITATS": "Universitats",
+      "VALOR_CONTRACTE": "Valor contracte",
+      "VEURE_RESULTATS": "Veure resultats"
+    },
+    "LICITAR": {
+      "IMPORT": "Import",
+      "LICITA": "Licita!",
+      "LICITA_PER": "Licita per",
+      "MES_BAIXA": "Licitació més baixa",
+      "NUMLICITACIONS": "Nº licitacions",
+      "ULTIMES_LICITACIONS": "Últimes licitacions"
+    },
+    "MISSATGE_RESULTAT_FILTRE_BUIT": "No hi ha cap resultat disponible amb els filtres aplicats",
+    "PUJAR": "Pujar contracte",
+    "TITOL": "Cercador de licitacions"
+  },
+  "LICITACIONS" : {
+    "CREADES_OBERTES_MISSATGE_BUIT": "No hi ha cap licitació creada amb període de sol·licitud obert.",
+    "CREADES_OBERTES_TITOL": "Licitacions creades obertes",
+    "CREADES_TANCADES_MISSATGE_BUIT": "No hi ha cap licitació creada amb període de sol·licitud tancada.",
+    "CREADES_TANCADES_TITOL": "Licitacions creades tancades",
+    "INSCRITES_OBERTES_MISSATGE_BUIT": "No hi ha cap licitació inscrita amb període de sol·licitud obert.",
+    "INSCRITES_OBERTES_TITOL": "Licitacions inscrites obertes",
+    "INSCRITES_TANCADES_MISSATGE_BUIT": "No hi ha cap licitació inscrita amb període de sol·licitud tancada.",
+    "INSCRITES_TANCADES_TITOL": "Licitacions inscrites tancades",
+    "PREFERIDES_MISSATGE_BUIT": "No hi ha cap licitació preferida.",
+    "PREFERIDES_TITOL": "Licitacions preferides",
+    "TITOL": "Les meves licitacions"
+  },
+  "MENU": {
+    "ALERTES": "Alertes",
+    "BUSCADOR": "Cercador",
+    "LICITACIONS": "Licitacions",
+    "MISSATGES": "Missatges",
+    "PERFIL": "Perfil"
+  },
+  "MAPS": {
+    "CANCEL": "Cancel·lar",
+    "SUBTITOL_UBI": "La meva ubicació",
+    "TITOL": "Mapa de licitacions",
+    "TITOL_UBI": "Ubicació actual"
+  },
+  "MISSATGES_CONFIRMACIONS": {
+    "CONFIRMACIO_ESBORRAR_CONTRACTE": "El contracte ha estat eliminat amb èxit.",
+    "CONFIRMACIO_LICITACIO_REALITZADA": "La seva licitació ha estat realitzada amb èxit.",
+    "CONFIRMACIO_VALORACIO_CREADA": "La seva valoració ha sigut creada amb èxit.",
+    "CONFIRMACIO_VALORACIO_ESBORRADA": "La seva valoració ha sigut esborrada amb èxit.",
+    "CONFIRMACIO_VALORACIO_MODIFICADA": "La seva valoració ha sigut modificada amb èxit.",
+    "PREGUNTA_CONFIRMAR_ESBORRAR_CONTRACTE": "Estàs segur/a que desitges esborrar aquest contracte?",
+    "PREGUNTA_CONFIRMAR_ESBORRAR_VALORACIO": "Estàs segur/a que desitges esborrar aquesta valoració?",
+    "PREGUNTA_CONFIRMAR_LICITAR": "Estàs segur/a de licitar per ",
+    "PREGUNTA_CONFIRMAR_VALORACIO": "Estàs segur/a que desitges guardar aquesta valoració?"
+  },
+  "PERFIL_EXTERN": {
+    "CARREGAR": "Carregant més contractes ...",
+    "FILTRE_BUIT": "No hi ha contractes per a aquest usuari",
+    "MISSATGE": "Enviar missatge",
+    "VEURE": "Veure les valoracions rebudes"
+  },
+  "PROFILE": {
+    "CONFIRMAR": "Confirmar",
+    "CONFIRMACIO": "Confirmació",
+    "CONTRASENYA": "Canviar contrasenya",
+    "DESAR": "Desar",
+    "EDITAR": "Editar dades del perfil",
+    "GOOGLE": "Compte de Google",
+    "IDIOMA": "Seleccionar idioma",
+    "MISSATGE": "Estàs segur/a que desitges tancar la sessió?",
+    "MISSATGE2": "Les dades s'han modificat amb èxit.",
+    "SEGURETAT": "Seguretat",
+    "TANCAR": "Tancar sessió",
+    "TITOL": "El meu perfil",
+    "USUARIS": "Gestió d'usuaris",
+    "VAL_REALITZADES": "Valoracions realitzades",
+    "VAL_REBUDES": "Valoracions rebudes"
+  },
+  "PROFILE-EDIT": {
+    "CANCEL": "Cancel·la en qualsevol moment",
+    "CORREU": "Correu electrònic *",
+    "CP": "Codi postal",
+    "DESA": "Desa",
+    "DESCRIPCIO": "Descripció",
+    "DIRECCIO": "Direcció",
+    "IDIOMA": "Idioma *",
+    "NOM": "Nom empresa *",
+    "NOTIFICACIONS": "Notificacions per l'app",
+    "MISSATGE": "Estàs segur/a que desitges modificar les dades?",
+    "OP": "Òrgan públic",
+    "ORGAN": "Nom de l'òrgan",
+    "PAIS": "País",
+    "SELECT_LANG": "Selecciona un idioma",
+    "SELECT_NOM": "Introdueix el nom de l'empresa",
+    "SELECT_ORGAN": "Selecciona el teu òrgan",
+    "TELEFON": "Telèfon",
+    "TITOL": "Edita les teves dades",
+    "WEB": "Web"
+  },
+  "PROFILE-GOOGLE": {
+    "CALENDAR": "Actualment tens vinculat el teu compte de Google Calendar",
+    "GOOGLE": "Actualment el teu compte d'Adjudi-Cat està vinculat amb Google",
+    "MISSATGE": "Estàs segur/a que desitges desvincular el compte de Google Calendar?",
+    "NOGOOGLE": "No hi ha cap compte de Google vinculat",
+    "NOTA": "Al desvincular, hauràs de tornar a iniciar sessió",
+    "TITOL": "Compte de Google"
+  },
+  "PROFILE-PWD": {
+    "ACTUAL": "Contrasenya actual",
+    "CANVIAR": "Canviar contrasenya",
+    "ERROR": "Error",
+    "ERROR1": "Les contrasenyes no coincideixen",
+    "MESSAGE": "Estàs segur/a que desitges modificar la contrasenya?",
+    "MESSAGE2": "La contrasenya s'ha modificat correctament",
+    "NOVA": "Nova contrasenya",
+    "RENOVA": "Repeteix la nova contrasenya",
+    "TITOL": "Canviar contrasenya"
+  },
+  "PROFILE-US": {
+    "CERCAR": "Cercar usuaris",
+    "MISSATGE": "No s'ha trobat cap usuari",
+    "TITOL": "Gestió d'usuaris",
+    "NOM": "Nom usuari",
+    "ESTAT": "Estat"
+  },
+  "PUBLICAR_CONTRACTE": {
+    "ANYS": "Anys",
+    "DIES": "Dies",
+    "DURACIO": "Duració",
+    "INTRODUIR_PRESSUPOST": "Introdueix el pressupost",
+    "INTRODUEIX_URL": "Introdueix la URL",
+    "INTRODUIR_VALOR_ESTIMAT": "Introdueix el valor estimat",
+    "LOTS": "Lots",
+    "MESOS": "Mesos",
+    "NOM_SUBTIPUS_CONTRACTE": "Nom del subtipus de contracte",
+    "NOM_LOT": "Nom del lot",
+    "NUM_ANYS": "#anys",
+    "NUM_DIES": "#dies",
+    "NUM_MESOS": "#mesos",
+    "PUBLICAR": "Publicar",
+    "SELECCIONAR_SUBTIPUS_CONTRACTE": "Seleccionar el teu subtipus de contracte",
+    "SELECCIONAR_ID_AMBIT": "Seleccionar ID de l'àmbit",
+    "SELECCIONAR_LOT": "Selecciona el teu lot",
+    "SELECCIONAR_TIPUS_RESULTAT": "Seleccionar el tipus de resultat",
+    "TERMINI": "Termini",
+    "TIPUS_PROCEDIMENT": "Tipus de procediment",
+    "TIPUS_RESULTAT": "Tipus de resultat",
+    "URL_CONTRACTE": "URL del contracte",
+    "VALOR_ESTIMAT": "Valor estimat"
+  },
+  "TARJETA_CONTRACTE": {
+    "FINS": "Fins"
+  },
+  "TARJETA_EMPRESA": {
+    "LICITACIONS_ACTIVES": "licitacions actives.",
+    "OPINIONS": "Opinions",
+    "TE": "Té",
+    "VALORACIO": "Valoració"
+  },
+  "TARJETA_LLISTA": {
+    "LICITACIONS_MIN": "licitacions"
+  },
+  "TARJETA_PERFIL": {
+    "CORREU_ELECTRONIC": "Correu electrònic",
+    "TELEFON": "Telèfon",
+    "WEB": "Web"
+  },
+  "TARJETA_VALORACIONS": {
+    "FETA_A": "Feta a",
+    "FETA_PER": "Feta per"
+  },
+  "VALORACIONS": {
+    "MISSATGE_NO_VALORACIONS_ORGAN": "No ha rebut cap valoració",
+    "MISSATGE_NO_VALORACIONS_REALITZADES": "No has realitzat cap valoració",
+    "MISSATGE_NO_VALORACIONS_REBUDES": "No has rebut cap valoració",
+    "TITOL_REALITZADES": "Valoracions realitzades",
+    "TITOL_REBUDES": "Valoracions rebudes"
+  }
+}

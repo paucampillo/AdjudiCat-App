@@ -1,0 +1,74 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-label {
+  font-size: 12px;
+  line-height: 22px;
+  color: #8c8c8c;
+}
+
+ion-content {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 30px;
+  line-height: 15px;
+  color: black;
+  text-align: right;
+}
+
+.ofertas-container {
+  justify-content: left;
+}
+
+.app-tarjeta-contracte {
+  width: 100%;
+}
+
+.search-bar {
+  width: 40%;
+  height: 30px;
+  font-size: 16px;
+}
+
+.afegir-contracte {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.custom-list {
+  --ion-item-background: white;
+  color: white;
+}
+
+.resultatFiltresBuit {
+  font-size: 15px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.pujarContracte {
+  color: black;
+  font-size: 16px;
+}

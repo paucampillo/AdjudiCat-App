@@ -1,0 +1,266 @@
+{
+  "ALERTES": {
+    "ACTUALITZA": "Update",
+    "AFEGIR": "Add event",
+    "AUTORITZA": "Authorize",
+    "CREAR": "Create event",
+    "DATA_FI": "End date",
+    "DATA_INI": "Start date",
+    "DESCRIPCIO": "Description",
+    "HORA_FI": "End time",
+    "HORA_INI": "Start time",
+    "MESSAGE": "Loading calendar ...",
+    "NOM": "Name",
+    "SURT": "Exit",
+    "TITOL": "Alerts",
+    "UBICACIO": "Location"
+  },
+  "CHAT_MENSAJES": {
+    "ESCRIU_MISSATGE": "Write a message..."
+  },
+  "COMUNS": {
+    "ACCEPTAR": "Agreed",
+    "CANCELAR": "Cancel",
+    "CARREGANT_CONTRACTES": "Loading more contracts...",
+    "CONFIRMACIÓ": "Confirmation",
+    "CONFIRMAR": "Confirm",
+    "ESBORRA": "Delete"
+  },
+  "CONTACTOS_MENSAJES": {
+    "BUSCAR_CONTACTE": "Search for contact",
+    "MISSATGE_LLISTA_CONTACTES_BUIT": "There is no message contact."
+  },
+  "HOME": {
+    "BUSCAR": "Seeks bids",
+    "CONTRACTE" : {
+      "DURADA_CONTRACTE": "Duration of contract",
+      "ENLLAC_PUBLICACIO": "Publication link",
+      "ESBORRAR_CONTRACTE": "Delete contract",
+      "LICITAR": "Bid",
+      "MISSATGE_FALTA_PUNTUACIO": "You cannot create a rating without a score. Please add a rating to continue.",
+      "OFERTES": "offers",
+      "PRESSUPOST": "Budget",
+      "SENSE_IVA": "excluding IVA",
+      "SOBRE_EMPRESA": "About the company",
+      "SUBTIPUS_CONTRACTE": "Contract subtype",
+      "TERMINI_PRESENTACIO_OFERTES": "Deadline for submission of bids",
+      "VALORA_EMPRESA_BOTO": "Rate the company",
+      "VALORA_EMPRESA": {
+        "INDICA_PUNTUACIO": "Indicates score (1 low, 5 high)*",
+        "INTRODUEIX_VALORACIO": "Enter your rating",
+        "OPINIO": "What do you think of the company ",
+        "VALORA": "Rate",
+        "VALORACIO_FETA": "You already have a rating for this company. If you want, you can modify what you have put."
+      }
+    },
+    "FILTRES": {
+      "ALTRA_LEGISLACIO_SECTORIAL": "Other Sectorial Legislation",
+      "ALTRES_ENS": "Other Entities",
+      "ALTRES_PROCEDIMENTS_SENSE_INSTRUCCIONS_INTERNES": "Other Procedures Without Internal Instructions",
+      "AMBIT": "Scope",
+      "CODI_EXPEDIENT": "File code",
+      "CONCESSIO_SERVEIS": "Service Concession",
+      "CONCURS_PROJECTES": "Project Competition",
+      "CONTRACTE_BASAT_ACORD_MARC": "Contract Based on Framework Agreement",
+      "CONTRACTE_MENOR": "Minor Contract",
+      "DEPARTAMENTS_I_SECTOR_PUBLIC_GENERALITAT": "Departments and Public Sector of the Generalitat de Catalunya",
+      "ENTITATS_ADM_LOCAL": "Local Administration Entities",
+      "ESBORRAR_FILTRES": "Clear filters",
+      "GESTIO_SERVEIS_PUBLICS": "Public Services Management",
+      "INSTITUCIONS_I_ORGANS_ESTATUTARIS": "Institutions and Statutory Bodies",
+      "INTRODUIR_CODI": "Enter the code",
+      "INTRODUIR_LLOC": "Enter the location",
+      "INTRODUIR_OBJECTE": "Enter the object",
+      "INTRODUIR_VALOR": "Enter the value",
+      "LICITACIO_NEGOCIACIO": "Bidding with Negotiation",
+      "LLOC_EXECUCIO": "Execution Location",
+      "NEGOCIAT_SENSE_PUBLICITAT": "Negotiated Without Advertising",
+      "OBERT": "Open",
+      "OBJECTE_CONTRACTE": "Object of contract",
+      "OBRES": "Works",
+      "ORDENAT_PER": "Sorted by",
+      "PRIVAT_ADMINISTRACIO_PUBLICA": "Public Administration Private",
+      "PROCEDIMENT": "Procedure",
+      "RESTRINGIT": "Restricted",
+      "SELECCIONAR_TIPUS": "Select type",
+      "SERVEIS": "Services",
+      "SUBMINISTRAMENTS": "Supplies",
+      "TIPUS_CONTRACTE": "Contract type",
+      "TITOL_FILTRES": "Filters",
+      "UNIVERSITATS": "Universities",
+      "VALOR_CONTRACTE": "Contract value",
+      "VEURE_RESULTATS": "See results"
+    },
+    "LICITAR": {
+      "IMPORT": "Amount",
+      "LICITA": "Bid!",
+      "LICITA_PER": "Bid for",
+      "MES_BAIXA": "Lowest bid",
+      "NUMLICITACIONS": "Num. of bids",
+      "ULTIMES_LICITACIONS": "Latest bids"
+    },
+    "MISSATGE_RESULTAT_FILTRE_BUIT": "There are no results available with the filters applied.",
+    "PUJAR": "Upload contract",
+    "TITOL": "Bid Searcher"
+  },
+  "LICITACIONS" : {
+    "CREADES_OBERTES_MISSATGE_BUIT": "There are no bids created with an open application period.",
+    "CREADES_OBERTES_TITOL": "Open created bids",
+    "CREADES_TANCADES_MISSATGE_BUIT": "There are no bids created with a closed application period.",
+    "CREADES_TANCADES_TITOL": "Closed created bids",
+    "INSCRITES_OBERTES_MISSATGE_BUIT": "There are no bids registered with an open application period.",
+    "INSCRITES_OBERTES_TITOL": "Open registered bids",
+    "INSCRITES_TANCADES_MISSATGE_BUIT": "There are no bids registered with a closed application period.",
+    "INSCRITES_TANCADES_TITOL": "Closed registered bids",
+    "PREFERIDES_MISSATGE_BUIT": "There are no preferred bids.",
+    "PREFERIDES_TITOL": "Preferred bids",
+    "TITOL": "My bids"
+  },
+  "MENU": {
+    "ALERTES": "Alerts",
+    "BUSCADOR": "Search",
+    "LICITACIONS": "Bids",
+    "MISSATGES": "Messages",
+    "PERFIL": "Profile"
+  },
+  "MAPS": {
+    "CANCEL": "Cancel",
+    "SUBTITOL_UBI": "My location",
+    "TITOL": "Bidding Map",
+    "TITOL_UBI": "Current location"
+  },
+  "MISSATGES_CONFIRMACIONS": {
+    "CONFIRMACIO_ESBORRAR_CONTRACTE": "The contract has been successfully deleted.",
+    "CONFIRMACIO_LICITACIO_REALITZADA": "Your bid has been successfully completed.",
+    "CONFIRMACIO_VALORACIO_CREADA": "Your rating has been successfully created.",
+    "CONFIRMACIO_VALORACIO_ESBORRADA": "Your rating has been successfully deleted.",
+    "CONFIRMACIO_VALORACIO_MODIFICADA": "Your rating has been successfully modified.",
+    "PREGUNTA_CONFIRMAR_ESBORRAR_CONTRACTE": "Are you sure you want to delete this contract?",
+    "PREGUNTA_CONFIRMAR_ESBORRAR_VALORACIO": "Are you sure you want to delete this rating?",
+    "PREGUNTA_CONFIRMAR_LICITAR": "Are you sure you want to bid for ",
+    "PREGUNTA_CONFIRMAR_VALORACIO": "Are you sure you want to keep this rating?"
+  },
+  "PERFIL_EXTERN": {
+    "CARREGAR": "Loading more contracts ...",
+    "FILTRE_BUIT": "There are no contracts for this user",
+    "MISSATGE": "Send message",
+    "VEURE": "View ratings received"
+  },
+  "PROFILE": {
+    "CONFIRMAR": "Confirm",
+    "CONFIRMACIO": "Confirmation",
+    "CONTRASENYA": "Change password",
+    "DESAR": "Save",
+    "EDITAR": "Edit profile data",
+    "GOOGLE": "Google account",
+    "IDIOMA": "Select language",
+    "MISSATGE": "Are you sure you want to log out?",
+    "MISSATGE2": "The data has been successfully modified.",
+    "SEGURETAT": "Security",
+    "TANCAR": "Log out",
+    "TITOL": "My profile",
+    "USUARIS": "User management",
+    "VAL_REALITZADES": "Ratings made",
+    "VAL_REBUDES": "Ratings received"
+  },
+  "PROFILE-EDIT": {
+    "CANCEL": "Cancel at any time",
+    "CORREU": "Email *",
+    "CP": "Postal code",
+    "DESA": "Save",
+    "DESCRIPCIO": "Description",
+    "DIRECCIO": "Address",
+    "IDIOMA": "Language *",
+    "NOM": "Company name *",
+    "NOTIFICACIONS": "App notifications",
+    "MISSATGE": "Are you sure you want to modify the data?",
+    "OP": "Public body",
+    "ORGAN": "Name of the body",
+    "PAIS": "Country",
+    "SELECT_LANG": "Select a language",
+    "SELECT_NOM": "Enter the company name",
+    "SELECT_ORGAN": "Select your body",
+    "TELEFON": "Phone",
+    "TITOL": "Edit your data",
+    "WEB": "Web"
+  },
+  "PROFILE-GOOGLE": {
+    "CALENDAR": "You currently have your Google Calendar account linked",
+    "GOOGLE": "Your Adjudi-Cat account is currently linked with Google",
+    "MISSATGE": "Are you sure you want to unlink the Google Calendar account?",
+    "NOGOOGLE": "There is no linked Google account",
+    "NOTA": "Upon unlinking, you will have to log in again",
+    "TITOL": "Google Account"
+  },
+  "PROFILE-PWD": {
+    "ACTUAL": "Current password",
+    "CANVIAR": "Change password",
+    "ERROR": "Error",
+    "ERROR1": "Passwords do not match",
+    "MESSAGE": "Are you sure you want to change the password?",
+    "MESSAGE2": "The password has been successfully changed",
+    "NOVA": "New password",
+    "RENOVA": "Repeat the new password",
+    "TITOL": "Change password"
+  },
+  "PROFILE-US": {
+    "CERCAR": "Search users",
+    "MISSATGE": "No users found",
+    "TITOL": "User management",
+    "NOM": "User name",
+    "ESTAT": "State"
+  },
+  "PUBLICAR_CONTRACTE": {
+    "ANYS": "Years",
+    "DIES": "Days",
+    "DURACIO": "Duration",
+    "INTRODUIR_PRESSUPOST": "Enter the budget",
+    "INTRODUEIX_URL": "Enter the URL",
+    "INTRODUIR_VALOR_ESTIMAT": "Enter the estimated value",
+    "LOTS": "Lots",
+    "MESOS": "Months",
+    "NOM_SUBTIPUS_CONTRACTE": "Contract subtype name",
+    "NOM_LOT": "Lot name",
+    "NUM_ANYS": "#years",
+    "NUM_DIES": "#days",
+    "NUM_MESOS": "#months",
+    "PUBLICAR": "Post",
+    "SELECCIONAR_SUBTIPUS_CONTRACTE": "Select your contract subtype",
+    "SELECCIONAR_ID_AMBIT": "Select area ID",
+    "SELECCIONAR_LOT": "Select your lot",
+    "SELECCIONAR_TIPUS_RESULTAT": "Select the type of result",
+    "TERMINI": "Deadline",
+    "TIPUS_PROCEDIMENT": "Type of procedure",
+    "TIPUS_RESULTAT": "Type of result",
+    "URL_CONTRACTE": "Contract URL",
+    "VALOR_ESTIMAT": "Estimated value"
+  },
+  "TARJETA_CONTRACTE": {
+    "FINS": "To"
+  },
+  "TARJETA_EMPRESA": {
+    "LICITACIONS_ACTIVES": "active bids.",
+    "OPINIONS": "Opinions",
+    "TE": "Has",
+    "VALORACIO": "Rating"
+  },
+  "TARJETA_LLISTA": {
+    "LICITACIONS_MIN": "bids"
+  },
+  "TARJETA_PERFIL": {
+    "CORREU_ELECTRONIC": "E-mail address",
+    "TELEFON": "Phone",
+    "WEB": "Web"
+  },
+  "TARJETA_VALORACIONS": {
+    "FETA_A": "Made to",
+    "FETA_PER": "Made by"
+  },
+  "VALORACIONS": {
+    "MISSATGE_NO_VALORACIONS_ORGAN": "No rating has been received.",
+    "MISSATGE_NO_VALORACIONS_REALITZADES": "You have not made any assessment.",
+    "MISSATGE_NO_VALORACIONS_REBUDES": "You have not received any rating.",
+    "TITOL_REALITZADES": "Ratings made",
+    "TITOL_REBUDES": "Ratings received"
+  }
+}

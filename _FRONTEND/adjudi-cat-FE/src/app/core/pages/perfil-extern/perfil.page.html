@@ -1,0 +1,36 @@
+<app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false"></app-header-generico>
+
+<ion-content [fullscreen]="true">
+
+  <!-- contracte.usuariCreacio -->
+  <app-tarjeta-perfil-extern *ngIf="organ" [usuari]="organ"></app-tarjeta-perfil-extern>
+
+  <div class="botons">
+    <ion-button color="dark" fill="outline" class="boto-valoracions" (click)="navegaValoracionsOrgan()">
+      <ion-icon slot="start" name="star"></ion-icon>
+      <ion-label class="boto-text">{{ 'PERFIL_EXTERN.VEURE' | translate}}</ion-label>
+    </ion-button>
+  </div>
+
+  <!-- llista ofertes -->
+  <ion-label *ngIf="licitacionsList && licitacionsList.length === 0" lines="none">
+    <p class="resultatFiltresBuit">{{missatgeResultatFiltreBuit}}</p>
+  </ion-label>
+  <div class="ofertas-container" *ngIf="licitacionsList">
+    <ion-list lines="none" class="custom-list">
+      <ion-item *ngFor="let contracte of licitacionsList" (click)="anarDetalls(contracte)">
+        <app-tarjeta-contracte [contracte] = contracte></app-tarjeta-contracte>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll *ngIf="page < totalPages" (ionInfinite)="loadContractes($event, true)" class="custom-infinite-scroll">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" [loadingText]=loadText>
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+
+  <!--*ngIf="codiRol === 'EP' || codiRol === 'ADM'" -->
+  <div  class="boto-enviarMissatge">
+    <!-- contracte.usuariCreacio -->
+    <ion-button *ngIf="organ" (click)="enviarMissatge(organ)" type="submit" expand="block" color="#c00000" style="border-radius: 10px;" class="bMD">{{ 'PERFIL_EXTERN.MISSATGE' | translate}}</ion-button>
+  </div>
+</ion-content>

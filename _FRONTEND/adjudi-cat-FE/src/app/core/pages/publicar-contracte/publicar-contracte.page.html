@@ -1,0 +1,198 @@
+<ion-content fullscreen="true">
+  <app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false"></app-header-generico>
+
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-input [label]="codiExpedient" labelPlacement="floating" type="text" [placeholder]="introdueixCodi" formControlName="codiEx"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-select [label]="tipusContracte" labelPlacement="floating" [placeholder]="seleccionaTipus" [cancelText]="cancelar" [okText]="accepta" formControlName="TContracte" (ionChange)="loadSTContractes()">
+              <ion-select-option *ngFor="let TContracte of TContracteList" [value]="TContracte" >{{TContracte}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf="formGroup.get('TContracte')?.value !== 'Gestió de Serveis Públics' && formGroup.get('TContracte')?.value !== 'Concessió de serveis' && formGroup.get('TContracte')?.value !== ''">
+        <ion-col size="10">
+          <ion-item>
+            <ion-input [label]="nomSubtipusContracte" labelPlacement="floating" type="text" placeholder="" formControlName="STContracte"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button (click)="loadSTContractesPerLletres()">
+            <ion-icon name="search-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf="formGroup.get('TContracte')?.value !== 'Gestió de Serveis Públics' && formGroup.get('TContracte')?.value !== 'Concessió de serveis' && formGroup.get('TContracte')?.value !== ''">
+        <ion-col size="12">
+          <ion-item>
+            <ion-select [label]="subtipusContracte" labelPlacement="floating" [placeholder]="seleccionSubtipusContracte" [cancelText]="cancelar" [okText]="accepta" formControlName="STContracte">
+              <ion-select-option *ngFor="let STContracte of STContracteList">{{STContracte}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-select [label]="tipusProcediment" labelPlacement="floating" [placeholder]="seleccionaTipus" [cancelText]="cancelar" [okText]="accepta" formControlName="TProcediment">
+              <ion-select-option *ngFor="let TProcediment of TProcedimentList" >{{TProcediment}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-input [label]="objecteContracte" labelPlacement="floating" type="text" [placeholder]="introdueixObjecteContracte" formControlName="obCont"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-item>
+            <ion-input [label]="pressupost" labelPlacement="floating" type="number" inputmode="decimal" pattern="[0-9]*" [placeholder]="introdueixPressupost" formControlName="pressu"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-item>
+            <ion-input [label]="valorEstimat" labelPlacement="floating" type="number" inputmode="decimal" pattern="[0-9]*" [placeholder]="introdueixValorEstimat" formControlName="valest"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-input [label]="llocExecucio" labelPlacement="floating" type="text" [placeholder]="introdueixLlocExecucio" formControlName="llocExc"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="3">
+          <ion-item>
+            <ion-label>{{ 'PUBLICAR_CONTRACTE.DURACIO' | translate }}</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="3">
+          <ion-item>
+            <ion-input [label]="anys" labelPlacement="floating" type="number" pattern="[0-9]*" [placeholder]="numAnys" formControlName="anys"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="3">
+          <ion-item>
+            <ion-input [label]="mesos" labelPlacement="floating" type="number" pattern="[0-9]*" [placeholder]="numMesos" formControlName="mesos"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="3">
+          <ion-item>
+            <ion-input [label]="dies" labelPlacement="floating" type="number" pattern="[0-9]*" [placeholder]="numDies" formControlName="dies"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>{{ 'PUBLICAR_CONTRACTE.TERMINI' | translate }}</ion-label>
+            <ion-datetime display-format="DD/MM/YYYY"
+                          formControlName="term"
+                          [min]="minDate"
+                          max="9999-12-31"
+                          min-time="00:00:00">
+            </ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-select [label]="tipusResultat" labelPlacement="floating" [placeholder]="seleccionaTipusResultat" [cancelText]="cancelar" [okText]="accepta" formControlName="TResultat">
+              <ion-select-option *ngFor="let TResultat of TResultatList" >{{TResultat}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-select [label]="ambit" labelPlacement="floating" [placeholder]="seleccionaIDAmbit" [cancelText]="cancelar" [okText]="accepta" formControlName="idA">
+             <ion-select-option *ngFor="let ambit of ambitList" >{{ambit.nom}}</ion-select-option>
+           </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+        <ion-row>
+          <ion-col size="10">
+            <ion-item>
+              <ion-input [label]="nomLot" labelPlacement="floating" type="text" placeholder="" formControlName="nomLot"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button (click)="loadLot()">
+              <ion-icon name="search-outline"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12">
+            <!-- Lots -->
+            <ion-item>
+              <ion-select [label]="lots" labelPlacement="floating" [placeholder]="seleccionaLot" [cancelText]="cancelar" [okText]="accepta" formControlName="idLot">
+                <ion-select-option *ngFor="let lot of lotList">{{lot.descripcio}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-input [label]="urlContracte" labelPlacement="floating" type="text" [placeholder]="introdueixURL" formControlName="url"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf="codiRol === 'OP' || codiRol === 'ADM'">
+        <ion-col size="12">
+          <ion-button type="submit" expand="full" color="#c00000" class="bRegistrat" [disabled]="formGroup.invalid">{{ 'PUBLICAR_CONTRACTE.PUBLICAR' | translate}}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+

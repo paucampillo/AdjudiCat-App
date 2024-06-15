@@ -1,0 +1,11 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo" [backButton]="false" [adjudibot]="true" [titulo]="titol"></app-header-generico>
+
+  <app-tarjeta-llista [tipus]="1" [numLicitacions]="numLicitacionsP" (click)="anarLicitacions('preferides')"></app-tarjeta-llista>
+  <app-tarjeta-llista *ngIf="codiRol === 'EP' || codiRol === 'ADM'" [tipus]="2" [numLicitacions]="numLicitacionsIO" (click)="anarLicitacions('inscrites-obertes')"></app-tarjeta-llista>
+  <app-tarjeta-llista *ngIf="codiRol === 'EP' || codiRol === 'ADM'" [tipus]="3" [numLicitacions]="numLicitacionsIT" (click)="anarLicitacions('inscrites-tancades')"></app-tarjeta-llista>
+  <app-tarjeta-llista *ngIf="codiRol === 'OP' || codiRol === 'ADM'" [tipus]="4" [numLicitacions]="numLicitacionsCO" (click)="anarLicitacions('creades-obertes')"></app-tarjeta-llista>
+  <app-tarjeta-llista *ngIf="codiRol === 'OP' || codiRol === 'ADM'" [tipus]="5" [numLicitacions]="numLicitacionsCT" (click)="anarLicitacions('creades-tancades')"></app-tarjeta-llista>
+</ion-content>
+
+<app-menu [filled]="2"></app-menu>

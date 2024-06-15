@@ -1,0 +1,24 @@
+<ion-card class="valoracio">
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label class="valoracio-usuari" *ngIf="tipus === titolRebudes">{{ 'TARJETA_VALORACIONS.FETA_PER' | translate }}: {{valoracio.autor.nom}}</ion-label>
+          <ion-label class="valoracio-usuari" *ngIf="tipus === titolRealitzades">{{ 'TARJETA_VALORACIONS.FETA_A' | translate }}: {{valoracio.receptor.nom}}</ion-label>
+        </ion-col>
+        <ion-col size="3">
+          <ion-label class="valoracio-data">{{valoracio.dataHoraValoracio | date:'dd/MM/yy'}}</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-icon *ngFor="let star of valoracioMitjanaEntera" name="star" color="warning"></ion-icon>
+          <ion-label class="valoracio-descripcio">{{valoracio.descripcio}}</ion-label>
+        </ion-col>
+        <ion-col class="bin" size="3" *ngIf="esborrar">
+          <ion-icon name="trash-outline" (click)="esborrarValoracio()"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

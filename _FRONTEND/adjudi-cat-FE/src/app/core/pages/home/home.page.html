@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo" [backButton]="false" [adjudibot]="true" [titulo]="titulo" style="position: fixed; width: 100%;"></app-header-generico>
+
+  <!-- botó per admin i org públic, publicar nou contracte -->
+  <div class="afegir-contracte" *ngIf="codiRol === 'OP' || codiRol === 'ADM'" style="position: fixed; width: 100%; top: 100px;">
+    <ion-button color="light" shape="round" (click)="pujarContracte()">
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col>
+            <ion-icon name="add-outline" size="large"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-label class="pujarContracte">{{ 'HOME.PUJAR' | translate}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-button>
+  </div>
+
+  <!-- barra buscar -->
+  <ion-grid style="position: fixed; width: 100%; top: 150px;">
+    <ion-row>
+      <ion-col class="search-bar" size="8">
+        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterContractesBuscador()" color="light" [placeholder]="buscar"></ion-searchbar>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-button color="light" shape="round" (click)="buscarMaps()" >
+          <ion-icon name="location-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-button id="open-modal" color="light" shape="round">
+          <ion-icon name="options" color="dark"></ion-icon>
+        </ion-button>
+        <app-filtros [searchTerm]="searchTerm" (searchTermChange)="onSearchTermChange($event)" (onAccept)="loadContractesAfterFilter($event)"></app-filtros>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- llista ofertes -->
+  <ion-label *ngIf="contractesList && contractesList.length === 0" lines="none">
+    <p class="resultatFiltresBuit">{{'HOME.MISSATGE_RESULTAT_FILTRE_BUIT' | translate}}</p>
+  </ion-label>
+  <div class="ofertas-container" *ngIf="contractesList" style="margin-top: 230px; overflow: auto; height: calc(100% - 200px);">
+    <ion-list lines="none" class="custom-list">
+      <ion-item *ngFor="let contracte of contractesList" (click)="anarDetalls(contracte)">
+        <app-tarjeta-contracte class="app-tarjeta-contracte" [contracte] = contracte></app-tarjeta-contracte>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll *ngIf="page < totalPages" threshold="100px" (ionInfinite)="loadMoreContractes($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando más contratos...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>
+
+<!-- <menu></menu>-->
+<app-menu [filled]="1" style="position: fixed; width: 100%; bottom: 0;"></app-menu>

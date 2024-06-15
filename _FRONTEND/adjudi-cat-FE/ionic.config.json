@@ -1,0 +1,7 @@
+{
+  "name": "adjudi-cat-FE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

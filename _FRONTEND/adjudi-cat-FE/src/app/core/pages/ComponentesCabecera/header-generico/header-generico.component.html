@@ -1,0 +1,22 @@
+<ion-header [style.backgroundImage]="'url(/assets/' + backgroundName + '.png)'" class="header">
+  <ion-grid>
+    <ion-row *ngIf="backButton || !adjudibot">
+      <ion-col *ngIf="backButton" size="4">
+        <a href="javascript:void(0);" onclick="window.history.back();">
+          <ion-icon name="arrow-back" class="icono-flecha"></ion-icon>
+        </a>
+      </ion-col>
+      <ion-col *ngIf="!adjudibot" size="8" class="title-container">
+        <h3 class="title">{{titulo}}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="adjudibot">
+      <ion-col size="4">
+        <img *ngIf="adjudibot" [src]="'/assets/logo.png'" alt="Back button image" class="back-button-image" (click)="navigateAdjudibot()">
+      </ion-col>
+      <ion-col size="8" class="title-container">
+        <h3 class="title">{{titulo}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>

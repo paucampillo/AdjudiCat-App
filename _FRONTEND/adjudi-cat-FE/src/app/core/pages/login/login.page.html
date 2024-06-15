@@ -1,0 +1,46 @@
+<meta name="google-signin-client_id" content="404163805462-j29is2p613rnh85tqck4ih736i8f9u9m.apps.googleusercontent.com" />
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<ion-header>
+  <div class="iGencat">
+    <img type="image/png" src="assets/icon/gc.png" alt="Elipse vermella logo Gencat negre">
+  </div>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginForm">
+  <div class="input-group" (click)="eliminarMissatgeError()">
+    <ion-item >
+      <ion-input formControlName="correu" type="email" placeholder="Correu electrònic" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="contrasenya" type="password" placeholder="Contrasenya" ></ion-input>
+    </ion-item>
+  </div>
+
+
+  <ion-button (click)="iniciarSessio()" type="submit" expand="block" color="#c00000" style="border-radius: 10px;" class="bIniciarSessio" >Iniciar sessió</ion-button>
+
+  <div *ngIf="missatgeError" class="error-message">
+    {{missatgeError}}
+  </div>
+
+  <div class="componentRegistrat">
+    <ion-label class="lNotensCompte">No tens compte? </ion-label>
+    <ion-label [routerLink]="['/signup']" class="lRegistrat"> Registra't! </ion-label>
+  </div>
+
+  <div class="bGoogle">
+    <!--(click)="signInWithGoogle()"-->
+    <ion-button  (click)="signInWithGoogle()" type="button" color="red" style="width: 65px; height: 60px" class="bGoogle">
+      <ion-icon name="logo-google" slot="icon-only"></ion-icon>
+    </ion-button>
+  </div>
+
+  </form>
+</ion-content>
+
+<div class="iAdjudicat">
+  <img type="image/png" src="assets/icon/ad.png" alt="Elipse vermella logo AdjudiCat negre">
+</div>

@@ -1,0 +1,64 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-label {
+  font-size: 12px;
+  line-height: 22px;
+  color: #8c8c8c;
+}
+
+ion-content {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 30px;
+  line-height: 15px;
+  color: black;
+  text-align: right;
+}
+
+.resultatUsuarisBuit {
+  font-size: 12px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin-left: 25px;
+}
+
+.searchbarStyle{
+  max-width: 90%;
+}
+
+.lock-open-icon {
+  color: black;
+}
+
+.lock-closed-icon {
+  color: red;
+}
+
+.tituloStyle{
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]=titulo></app-header-generico>
+
+  <ion-grid>
+    <ion-row *ngIf="calendarToken" class="ion-align-items-center">
+      <ion-col size="10">
+        <ion-item lines="none">
+          <ion-label class="ion-text-wrap">
+            {{ 'PROFILE-GOOGLE.CALENDAR' | translate }}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <div class="bGoogle">
+          <ion-button  (click)="desvincularCalendar()" type="button" color="red" style="width: 50px; height: 45px" class="bGoogle">
+            <ion-icon name="calendar-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="googleToken" class="ion-align-items-center">
+      <ion-col size="10">
+        <ion-item lines="none">
+          <ion-label class="ion-text-wrap">
+            {{ 'PROFILE-GOOGLE.GOOGLE' | translate }}
+            <p>
+              {{ 'PROFILE-GOOGLE.NOTA' | translate }}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <div class="bGoogle">
+          <ion-button (click)="desvincularCompte()" type="button" color="red" style="width: 50px; height: 45px" class="bGoogle">
+            <ion-icon name="logo-google" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="!calendarToken && !googleToken">
+      <ion-col size="12">
+        <ion-item>
+          <ion-label>
+            {{ 'PROFILE-GOOGLE.NOGOOGLE' | translate}}
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

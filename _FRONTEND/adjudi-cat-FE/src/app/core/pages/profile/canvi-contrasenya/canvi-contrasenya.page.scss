@@ -1,0 +1,25 @@
+ion-item {
+  --ion-item-background: white;
+  color: black;
+}
+
+ion-button {
+  --ion-color-base: #c00000;
+  text-transform: none;
+  --ion-border-radius: 50px;
+}
+
+.iGencat img {
+  position: absolute;
+  width: 100%;
+  height: 175px;
+  z-index: 999;
+}
+
+.bRegistrat {
+  border-radius: 50px;
+  font-size: 22px;
+  padding: 15px;
+  width: 250px;
+  margin: auto;
+}

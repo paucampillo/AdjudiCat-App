@@ -1,0 +1,65 @@
+ion-card-content {
+  color: black;
+  line-height: 20px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+ion-card-title {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+ion-card-subtitle {
+  color: #666666;
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+.oferta {
+  border-radius: 10px;
+  background: #F5F5F5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.infoExtra {
+  padding-left: 0;
+}
+
+.pressupostCol {
+  padding-left: 0;
+}
+
+.pressupost {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.dataTerminiCol {
+  text-align: right;
+  align-items: flex-start;
+}
+
+.dataTermini {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.infoOrg {
+  padding-left: 0;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+}
+
+.nomOrg {
+  color: #404040;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}

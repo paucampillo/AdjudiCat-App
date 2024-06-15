@@ -1,0 +1,33 @@
+<ion-modal trigger="open-modal-2">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="cancel()">{{ cancelar }}</ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="confirm()" [strong]="true">{{ valora }}</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <div *ngIf="idValoracioJaFeta !== null && idValoracioJaFeta !== undefined" class="valoracio-feta">
+        <ion-label style="font-weight: lighter;">{{'HOME.CONTRACTE.VALORA_EMPRESA.VALORACIO_FETA' | translate}}</ion-label>
+        <br>
+      </div>
+      <div style="margin: 30px;">
+        <ion-label >{{ 'HOME.CONTRACTE.VALORA_EMPRESA.OPINIO' | translate }} {{ usuariCreacio.nom }}?</ion-label>
+        <ion-input [(ngModel)]="valoracio.descripcio" type="text" style="color: gray" [placeholder]="introdueixValoracio"></ion-input>
+        <ion-label>{{'HOME.CONTRACTE.VALORA_EMPRESA.INDICA_PUNTUACIO' | translate}}</ion-label>
+        <ion-radio-group [(ngModel)]="valoracio.puntuacio">
+          <ion-row>
+            <ion-col *ngFor="let num of [1, 2, 3, 4, 5]">
+              <ion-radio [value]="num">{{num}}</ion-radio>
+            </ion-col>
+          </ion-row>
+        </ion-radio-group>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

@@ -1,0 +1,94 @@
+<app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]="receptor?.nom ?? ''"></app-header-generico>
+
+<ion-content scrollY>
+  <div *ngIf="mensajesList" style="padding-top: 20px">
+    <ion-list lines="none" #listaMensajes>
+      <ion-item *ngFor="let mensaje of mensajesList; let i = index">
+        <ion-grid *ngIf="mensajesList[mensajesSize-i-1].idemissor === contacteID" style="padding-top: 20px">
+          <ion-col size="1" class="ion-no-padding trianguloGris"></ion-col>
+          <ion-col size="11" class="ion-no-padding">
+            <ion-grid class="cuadro-grisStyle">
+              <ion-label>{{mensajesList[mensajesSize-i-1].missatge}}</ion-label>
+              <ion-row>
+                <ion-col class="cuadro-gris-horaStyle">
+                  <ion-label>{{mensajesList[mensajesSize-i-1].dataHoraEnvio | date: 'HH:mm'}}</ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="mensajesList[mensajesSize-i-1].dataHoraEnvio.toDateString() !== fechaActual.toDateString()">
+                <ion-col class="cuadro-gris-horaStyle">
+                  <ion-label>{{mensajesList[mensajesSize-i-1].dataHoraEnvio | date: 'yyyy-MM-dd' }}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+        </ion-grid>
+
+        <ion-grid *ngIf="mensajesList[mensajesSize-i-1].idemissor === userID" style="align-items:  flex-start;">
+          <ion-col size="11" class="ion-no-padding">
+            <ion-grid class="cuadro-rosaStyle">
+              <ion-label>{{ mensajesList[mensajesSize-i-1].missatge }}</ion-label>
+              <ion-row>
+                <ion-col class="cuadro-rosa-horaStyle">
+                  <ion-label>{{mensajesList[mensajesSize-i-1].dataHoraEnvio | date: 'HH:mm'}}</ion-label>
+                </ion-col>
+                <ion-col>
+                  <a (click)="mostrarConfirmacionEliminarMensaje(mensajesList[mensajesSize-i-1].idMissatge)" class="cuadro-rosa-trashStyle">
+                    <ion-icon name="trash" class="cuadro-gris-trashStyle"></ion-icon>
+                  </a>
+                </ion-col>
+              </ion-row>
+              <ion-row *ngIf="mensajesList[mensajesSize-i-1].dataHoraEnvio.toDateString() !== fechaActual.toDateString()">
+                <ion-col class="cuadro-rosa-horaStyle">
+                  <ion-label>{{ mensajesList[mensajesSize-i-1].dataHoraEnvio | date: 'yyyy-MM-dd' }}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+          <ion-col size="1" class="ion-no-padding trianguloRosa"></ion-col>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!--<ion-row style="padding-top: 20px">
+    <ion-col size="1" class="ion-no-padding trianguloGris"></ion-col>
+    <ion-col size="11" class="ion-no-padding">
+      <ion-grid class="cuadro-grisStyle">
+        <ion-label>Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaad</ion-label>
+        <ion-row>
+          <ion-col class="cuadro-gris-horaStyle"><ion-label>10:00</ion-label></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding-top: 20px">
+    <ion-col size="11" class="ion-no-padding">
+      <ion-grid class="cuadro-rosaStyle">
+        <ion-label>Adiosassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</ion-label>
+        <ion-row>
+          <ion-col class="cuadro-rosa-horaStyle"><ion-label>10:00</ion-label></ion-col>
+          <ion-col>
+            <a class="cuadro-rosa-trashStyle">
+              <ion-icon name="trash" class="cuadro-gris-trashStyle"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+    <ion-col size="1" class="ion-no-padding trianguloRosa"></ion-col>
+  </ion-row> -->
+</ion-content>
+
+
+  <ion-row style="padding-bottom: 20px">
+    <ion-col size="10" class="ion-no-padding inputMensajeStyle">
+      <ion-textarea [(ngModel)]="contenido" [placeholder]="escribeUnMensaje" class="textareaStyle" #myTextarea (ionInput)="ajustarAlturaTextarea()" (ionBlur)="restablecerAlturaSiVacio()"></ion-textarea>
+    </ion-col>
+    <ion-col size="1" class="ion-no-padding">
+      <ion-grid class="gridStyle">
+        <a class="botoEnviarStyle" (click)="enviarMensaje();">
+          <ion-icon name="send" class="iconoEnviarStyle"></ion-icon>
+        </a>
+      </ion-grid>
+    </ion-col>
+  </ion-row>

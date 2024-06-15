@@ -1,0 +1,64 @@
+<ion-content [fullscreen]="true" *ngIf="contracte">
+  <app-header-generico backgroundName="fondoRojo" [backButton]="true" [adjudibot]="false"></app-header-generico>
+
+  <div class="info-extra">
+    <ion-icon name="{{contracte.preferit ? 'heart' : 'heart-outline'}}" size="large" color="danger" aria-label="Favorite" (click)="canviFavorit()"></ion-icon><br>
+    <ion-label>{{ contracte.ofertesRebudes ? contracte.ofertesRebudes : '0'}} {{'HOME.CONTRACTE.OFERTES' | translate}}</ion-label><br>
+  </div>
+
+  <div class="info">
+    <h1>{{ 'HOME.FILTRES.TIPUS_CONTRACTE' | translate }}:</h1>
+    <ion-label *ngIf="contracte.tipusContracte">{{contracte.tipusContracte}}</ion-label>
+
+    <h1>{{ 'HOME.CONTRACTE.SUBTIPUS_CONTRACTE' | translate }}:</h1>
+    <ion-label *ngIf="contracte.subtipusContracte">{{contracte.subtipusContracte}}</ion-label>
+
+    <h1>{{ 'HOME.FILTRES.PROCEDIMENT' | translate }}:</h1>
+    <ion-label *ngIf="contracte.procediment">{{contracte.procediment}}</ion-label>
+
+    <h1>{{ 'HOME.FILTRES.OBJECTE_CONTRACTE' | translate }}:</h1>
+    <ion-label *ngIf="contracte.objecteContracte">{{contracte.objecteContracte}}</ion-label>
+
+    <h1>{{ 'HOME.CONTRACTE.PRESSUPOST' | translate }}:</h1>
+    <ion-label *ngIf="contracte.pressupostLicitacio">{{contracte.pressupostLicitacio}} € {{ 'HOME.CONTRACTE.SENSE_IVA' | translate }}</ion-label>
+
+    <h1>{{ 'HOME.FILTRES.LLOC_EXECUCIO' | translate }}:</h1>
+    <ion-label *ngIf="contracte.llocExecucio">{{contracte.llocExecucio}}</ion-label>
+
+    <h1>{{ 'HOME.CONTRACTE.DURADA_CONTRACTE' | translate }}:</h1>
+    <ion-label *ngIf="contracte.duracioContracte">{{contracte.duracioContracte}}</ion-label>
+
+    <h1>{{ 'HOME.CONTRACTE.TERMINI_PRESENTACIO_OFERTES' | translate }}:</h1>
+    <ion-label *ngIf="contracte.terminiPresentacioOfertes">{{contracte.terminiPresentacioOfertes.toString().substring(0,10)}}</ion-label><br>
+
+    <br>
+    <a *ngIf="contracte.enllacPublicacio" href="{{contracte.enllacPublicacio}}" target="_blank" class="enllaç-publicacio">{{ 'HOME.CONTRACTE.ENLLAC_PUBLICACIO' | translate}}</a><br>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2>{{ 'HOME.CONTRACTE.SOBRE_EMPRESA' | translate }}</h2>
+      </ion-col>
+      <ion-col *ngIf="codiRol === 'EP' || codiRol === 'ADM'" class="valora-empresa">
+        <ion-button id="open-modal-2" color="dark" fill="outline">
+          <ion-label>{{ 'HOME.CONTRACTE.VALORA_EMPRESA_BOTO' | translate }}</ion-label>
+        </ion-button>
+        <app-valora-empresa [usuariCreacio]="contracte.usuariCreacio"></app-valora-empresa>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <app-tarjeta-empresa [contracte]="contracte" (click)="viewPerfilExtern()"></app-tarjeta-empresa>
+
+  <div *ngIf="codiRol === 'EP' || codiRol === 'ADM'" class="boto-inscriure">
+    <ion-button color="danger" (click)="licitar(contracte)">{{ 'HOME.CONTRACTE.LICITAR' | translate }}</ion-button>
+  </div>
+  <div *ngIf="idUsuari === contracte.usuariCreacio?.idUsuari || codiRol === 'ADM'" class="boto-inscriure">
+    <ion-button color="danger" (click)="onDelete()">
+      <ion-icon name="trash"></ion-icon>
+      <ion-label>{{ 'HOME.CONTRACTE.ESBORRAR_CONTRACTE' | translate }}</ion-label>
+    </ion-button>
+  </div>
+</ion-content>

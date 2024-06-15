@@ -1,0 +1,29 @@
+<ion-card class="oferta" button="true">
+  <ion-card-content>
+    <ion-grid class="infoOrg">
+      <ion-row>
+        <ion-col size="2">
+          <ion-img class="logo" src="assets/icon/LogoGene.png"></ion-img>
+        </ion-col>
+        <ion-col size="8">
+          <ion-label class="nomOrg">{{ contracte.usuariCreacio.nom }}</ion-label>
+        </ion-col>
+        <ion-col class="ion-text-end">
+          <ion-icon name="{{contracte.preferit ? 'heart' : 'heart-outline'}}" size="large" color="danger" aria-label="Favorite" (click)="canviFavorit($event)"></ion-icon>
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+     <ion-card-title>{{contracte.objecteContracte.substring(0,80) + '...'}}</ion-card-title>
+     <ion-card-subtitle>{{contracte.llocExecucio}}</ion-card-subtitle>
+     <ion-grid class="infoExtra">
+       <ion-row>
+         <ion-col class="pressupostCol">
+           <ion-label class="pressupost">{{contracte.pressupostLicitacio}} € {{'HOME.CONTRACTE.SENSE_IVA' | translate}}</ion-label>
+         </ion-col>
+         <ion-col class="dataTerminiCol">
+           <ion-label class="dataTermini">{{ 'TARJETA_CONTRACTE.FINS' | translate }}: {{contracte.terminiPresentacioOfertes.toString().substring(0,10)}}</ion-label>
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-card-content>
+ </ion-card>

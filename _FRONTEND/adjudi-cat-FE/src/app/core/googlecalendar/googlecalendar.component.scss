@@ -1,0 +1,30 @@
+ion-button {
+  margin: 16px;
+}
+
+#content {
+  margin: 16px;
+}
+
+.datetimeStyle {
+  margin: 16px;
+
+}
+
+ion-button {
+  --ion-color-base: #c00000;
+  text-transform: none;
+  --ion-border-radius: 20px;
+}
+
+.AddEvent {
+  position: fixed;
+  bottom: 15%;
+  left: 45%;
+  transform: translateX(-50%);
+  z-index: 100;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+}

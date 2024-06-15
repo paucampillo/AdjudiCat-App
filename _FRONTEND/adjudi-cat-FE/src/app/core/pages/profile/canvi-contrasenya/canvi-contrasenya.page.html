@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]=titulo></app-header-generico>
+
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Contrasenya actual -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-PWD.ACTUAL' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="password" placeholder="********" formControlName="lastPass"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Contrasenya nova -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-PWD.NOVA' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="password" placeholder="********" formControlName="newPass"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Contrasenya repetida -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-PWD.RENOVA' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="password" placeholder="********" formControlName="repPass"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="submit" expand="full" color="#c00000" class="bRegistrat" [disabled]="formGroup.invalid">{{ 'PROFILE-PWD.CANVIAR' | translate }}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

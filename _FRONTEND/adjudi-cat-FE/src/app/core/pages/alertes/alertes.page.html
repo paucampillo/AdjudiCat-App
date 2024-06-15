@@ -1,0 +1,20 @@
+<app-header-generico backgroundName="fondoRojo" [backButton]="false" [adjudibot]="true" titulo="Alertes"></app-header-generico>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="gridStyle">
+    <ion-row>
+      <ion-col>
+
+        <app-googlecalendar [selectedDate]="selectedDate"></app-googlecalendar>
+        <!--
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="selectedDate" class="datetimeStyle"></ion-datetime>
+        -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
+<app-menu [filled]="4"></app-menu>

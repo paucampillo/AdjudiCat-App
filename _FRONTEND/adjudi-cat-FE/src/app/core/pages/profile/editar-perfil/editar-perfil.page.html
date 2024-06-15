@@ -1,0 +1,137 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]=titulo></app-header-generico>
+
+  <form *ngIf="usuari" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <!-- Nom de l'empresa -->
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.NOM' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="text" [placeholder]=selectN formControlName="nom"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Correu electrònic -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.CORREU' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="email" placeholder="user@example.com" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <!-- País i CP -->
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.PAIS' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="text" placeholder="" formControlName="pais"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.CP' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="text" placeholder="XXXXX" formControlName="cp" pattern="[0-9]*" maxlength="5"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Direcció -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.DIRECCIO' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="text" placeholder="c/" formControlName="direccio"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <!-- Telèfon i NIF -->
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.TELEFON' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="tel" placeholder="XX-XXX-XX-XX" formControlName="telefon"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-label position="floating">NIF</ion-label>
+            <ion-input labelPlacement="floating" type="text" formControlName="nif"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Lloc Web -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.WEB' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="url" placeholder="www.mysite.cat" formControlName="web"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!-- Idioma -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.IDIOMA' | translate }}</ion-label>
+            <ion-select labelPlacement="floating" [placeholder]=selectL [cancelText]=cancel [okText]=accepta formControlName="idioma">
+              <ion-select-option *ngFor="let idioma of idiomasList">{{idioma.nom}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Notificacions -->
+          <ion-item>
+            <ion-toggle formControlName="notificacions">
+              <ion-label>{{ 'PROFILE-EDIT.NOTIFICACIONS' | translate }}</ion-label>
+              <ion-note color="medium">{{ 'PROFILE-EDIT.CANCEL' | translate }}</ion-note>
+            </ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="codiRol === 'OP'">
+        <ion-col size="10">
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.ORGAN' | translate }}</ion-label>
+            <ion-input labelPlacement="floating" type="text" placeholder="" formControlName="nomOrgan"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button (click)="loadOrgans()">
+            <ion-icon name="search-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="codiRol === 'OP'">
+        <ion-col size="12">
+          <!-- Organs -->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.OP' | translate }}</ion-label>
+            <ion-select labelPlacement="floating" [placeholder]=selectO [cancelText]=cancel [okText]=accepta formControlName="organ">
+              <ion-select-option *ngFor="let organ of organsList">{{organ.nom}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <!--Descripcio-->
+          <ion-item>
+            <ion-label position="floating">{{ 'PROFILE-EDIT.DESCRIPCIO' | translate }}</ion-label>
+            <ion-textarea labelPlacement="floating" [counter]="true" maxlength="255" [autoGrow]="true" formControlName="descripcio"></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="submit" expand="full" color="#c00000" class="bRegistrat" [disabled]="formGroup.invalid">{{ 'PROFILE-EDIT.DESA' | translate }}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

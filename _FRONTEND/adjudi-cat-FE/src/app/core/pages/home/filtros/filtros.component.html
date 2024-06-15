@@ -1,0 +1,168 @@
+<ion-modal trigger="open-modal">
+  <ng-template>
+   <ion-header>
+     <ion-toolbar>
+         <ion-buttons slot="start">
+           <ion-button (click)="cancel()">{{ cancelar }}</ion-button>
+         </ion-buttons>
+         <ion-title>{{ 'HOME.FILTRES.TITOL_FILTRES' | translate }}</ion-title>
+         <ion-buttons slot="end">
+           <ion-button (click)="confirm()" [strong]="true">{{ 'HOME.FILTRES.VEURE_RESULTATS' | translate }}</ion-button>
+         </ion-buttons>
+       </ion-toolbar>
+     </ion-header>
+
+      <ion-content class="ion-padding">
+        <form [formGroup]="formGroup">
+          <ion-label>{{ 'HOME.FILTRES.ORDENAT_PER' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="10">
+                <ion-item>
+                  <ion-select [placeholder]="seleccionarTipus" formControlName="sort">
+                    <ion-select-option value="">-</ion-select-option>
+                    <ion-select-option value="codiExpedient">{{ 'HOME.FILTRES.CODI_EXPEDIENT' | translate }}</ion-select-option>
+                    <ion-select-option value="tipusContracte">{{ 'HOME.FILTRES.TIPUS_CONTRACTE' | translate }}</ion-select-option>
+                    <ion-select-option value="ambit">{{ 'HOME.FILTRES.AMBIT' | translate }}</ion-select-option>
+                    <ion-select-option value="procediment">{{ 'HOME.FILTRES.PROCEDIMENT' | translate }}</ion-select-option>
+                    <ion-select-option value="llocExecucio">{{ 'HOME.FILTRES.LLOC_EXECUCIO' | translate }}</ion-select-option>
+                    <ion-select-option value="valorContracte">{{ 'HOME.FILTRES.VALOR_CONTRACTE' | translate }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="{{ascendent ? 'arrow-up-outline' : 'arrow-down-outline'}}" (click)="canviarOrdre()"></ion-icon>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('sort')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-label>{{ 'HOME.FILTRES.CODI_EXPEDIENT' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input formControlName="nouCodi" type="text" [placeholder]="introduirCodi"></ion-input>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('nouCodi')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-label>{{ 'HOME.FILTRES.TIPUS_CONTRACTE' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="11">
+                <ion-item>
+                  <ion-select [placeholder]="seleccionarTipus" formControlName="tipusContracteSeleccionat">
+                    <ion-select-option value="">-</ion-select-option>
+                    <ion-select-option value="Obres">{{ 'HOME.FILTRES.OBRES' | translate }}</ion-select-option>
+                    <ion-select-option value="Subministraments">{{ 'HOME.FILTRES.SUBMINISTRAMENTS' | translate }}</ion-select-option>
+                    <ion-select-option value="Serveis">{{ 'HOME.FILTRES.SERVEIS' | translate }}</ion-select-option>
+                    <ion-select-option value="Privat d'Administració Pública">{{ 'HOME.FILTRES.PRIVAT_ADMINISTRACIO_PUBLICA' | translate }}</ion-select-option>
+                    <ion-select-option value="Gestió de Serveis Públics">{{ 'HOME.FILTRES.GESTIO_SERVEIS_PUBLICS' | translate }}</ion-select-option>
+                    <ion-select-option value="Altra legislació sectorial">{{ 'HOME.FILTRES.ALTRA_LEGISLACIO_SECTORIAL' | translate }}</ion-select-option>
+                    <ion-select-option value="Concessió de serveis">{{ 'HOME.FILTRES.CONCESSIO_SERVEIS' | translate }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('tipusContracteSeleccionat')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-label>{{ 'HOME.FILTRES.AMBIT' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="11">
+                <ion-item>
+                  <ion-select [placeholder]="seleccionarTipus" formControlName="tipusAmbitSeleccionat">
+                    <ion-select-option value="">-</ion-select-option>
+                    <ion-select-option value="Departaments i Sector Públic de la Generalitat de Catalunya">{{ 'HOME.FILTRES.DEPARTAMENTS_I_SECTOR_PUBLIC_GENERALITAT' | translate }}</ion-select-option>
+                    <ion-select-option value="Universitats">{{ 'HOME.FILTRES.UNIVERSITATS' | translate }}</ion-select-option>
+                    <ion-select-option value="Entitats de l'Administració Local">{{ 'HOME.FILTRES.ENTITATS_ADM_LOCAL' | translate }}</ion-select-option>
+                    <ion-select-option value="Altres Ens">{{ 'HOME.FILTRES.ALTRES_ENS' | translate }}</ion-select-option>
+                    <ion-select-option value="Institucions i Òrgans Estatutaris">{{ 'HOME.FILTRES.INSTITUCIONS_I_ORGANS_ESTATUTARIS' | translate }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('tipusAmbitSeleccionat')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-label>{{ 'HOME.FILTRES.PROCEDIMENT' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="11">
+                <ion-item>
+                  <ion-select [placeholder]="seleccionarTipus" formControlName="tipusProcedimetSeleccionat">
+                    <ion-select-option value="">-</ion-select-option>
+                    <ion-select-option value="Contracte menor">{{ 'HOME.FILTRES.CONTRACTE_MENOR' | translate }}</ion-select-option>
+                    <ion-select-option value="Obert">{{ 'HOME.FILTRES.OBERT' | translate }}</ion-select-option>
+                    <ion-select-option value="Contracte basat en acord marc">{{ 'HOME.FILTRES.CONTRACTE_BASAT_ACORD_MARC' | translate }}</ion-select-option>
+                    <ion-select-option value="Negociat sense publicitat">{{ 'HOME.FILTRES.NEGOCIAT_SENSE_PUBLICITAT' | translate }}</ion-select-option>
+                    <ion-select-option value="Restringit">{{ 'HOME.FILTRES.RESTRINGIT' | translate }}</ion-select-option>
+                    <ion-select-option value="Concurs de projectes">{{ 'HOME.FILTRES.CONCURS_PROJECTES' | translate }}</ion-select-option>
+                    <ion-select-option value="Licitació amb negociació">{{ 'HOME.FILTRES.LICITACIO_NEGOCIACIO' | translate }}</ion-select-option>
+                    <ion-select-option value="Altres procediments segons instruccions internes">{{ 'HOME.FILTRES.ALTRES_PROCEDIMENTS_SENSE_INSTRUCCIONS_INTERNES' | translate }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('tipusProcedimetSeleccionat')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-label>{{ 'HOME.FILTRES.LLOC_EXECUCIO' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input formControlName="nouLloc" type="text" [placeholder]="introduirLloc"></ion-input>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('nouLloc')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          <ion-label>{{ 'HOME.FILTRES.VALOR_CONTRACTE' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input formControlName="nouValor" type="text" [placeholder]="introduirValor"></ion-input>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('nouValor')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-label>{{ 'HOME.FILTRES.OBJECTE_CONTRACTE' | translate }}</ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-input formControlName="nouObjecte" type="text" [placeholder]="introduirObjecte" [value]="searchTerm"></ion-input>
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="close-circle-outline" (click)="esborraCamp('nouObjecte')"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </form><br>
+      </ion-content>
+    <ion-button shape="round" color="danger" size="small" (click)="esborraTot()">{{ 'HOME.FILTRES.ESBORRAR_FILTRES' | translate }}</ion-button>
+  </ng-template>
+</ion-modal>

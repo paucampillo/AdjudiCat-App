@@ -1,0 +1,148 @@
+<app-header-generico backgroundName="fondoRojo4" [backButton]="true"></app-header-generico>
+
+<ion-content fullscreen="true">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <!-- Nom de l'empresa -->
+        <ion-col size="12">
+          <ion-item>
+            <ion-input label="Nom empresa *" labelPlacement="floating" type="text" placeholder="Introdueix nom" formControlName="nom"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Correu electrònic -->
+          <ion-item>
+            <ion-input label="Correu electrònic *" labelPlacement="floating" type="email" placeholder="user@example.com" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="!isGoogleUser.google">
+        <ion-col size="12">
+          <!-- Contrasenya -->
+          <ion-item>
+            <ion-input label="Contrasenya *" labelPlacement="floating" type="password" placeholder="********" formControlName="contrasenya"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <!-- País i CP -->
+        <ion-col size="6">
+          <ion-item>
+            <ion-input label="País" labelPlacement="floating" type="text" placeholder="" formControlName="pais"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-input label="Codi Postal" labelPlacement="floating" type="text" placeholder="XXXXX" formControlName="cp" pattern="[0-9]*" maxlength="5"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Direcció -->
+          <ion-item>
+            <ion-input label="Direcció" labelPlacement="floating" type="text" placeholder="c/" formControlName="direccio"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <!-- Telèfon i NIF -->
+        <ion-col size="6">
+          <ion-item>
+            <ion-input label="Telèfon" labelPlacement="floating" type="tel" placeholder="XX-XXX-XX-XX" formControlName="telefon"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item>
+            <ion-input label="NIF" labelPlacement="floating" type="text" formControlName="nif"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Lloc Web -->
+          <ion-item>
+            <ion-input label="Lloc Web" labelPlacement="floating" type="url" placeholder="www.mysite.cat" formControlName="web"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Idioma -->
+          <ion-item>
+            <ion-select label="Idioma *" labelPlacement="floating" placeholder="Selecciona un idioma" cancelText="Cancel·la" okText="Accepta" formControlName="idioma">
+              <ion-select-option *ngFor="let idioma of idiomasList">{{idioma.nom}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Notificacions -->
+          <ion-item>
+            <ion-toggle formControlName="notificacions">
+              <ion-label>Notificacions per l'app</ion-label>
+              <ion-note color="medium">Cancel·la en qualsevol moment</ion-note>
+            </ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <!-- Tipus d'usuari -->
+          <ion-item>
+            <ion-select label="Usuari *" labelPlacement="floating" placeholder="Selecciona un tipus d'usuari" cancelText="Cancel·la" okText="Accepta" formControlName="rol">
+              <ion-select-option *ngFor="let rol of rolsList">{{rol.nom}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="formGroup.get('rol')?.value === 'Òrgan públic'">
+        <ion-col size="10">
+          <ion-item>
+            <ion-input label="Nom de l'òrgan" labelPlacement="floating" type="text" placeholder="" formControlName="nomOrgan"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button (click)="loadOrgans()">
+            <ion-icon name="search-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="formGroup.get('rol')?.value === 'Òrgan públic'">
+        <ion-col size="12">
+          <!-- Organs -->
+          <ion-item>
+            <ion-select label="Òrgan públic" labelPlacement="floating" placeholder="Selecciona el teu òrgan" cancelText="Cancel·la" okText="Accepta" formControlName="organ">
+              <ion-select-option *ngFor="let organ of organsList">{{organ.nom}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <!-- Botó de Registre -->
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="submit" expand="full" color="#c00000" class="bRegistrat" [disabled]="formGroup.invalid"> Registra't</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+
+
+<!-- <ion-datetime presentation="date" [preferWheel]="true"></ion-datetime> -->

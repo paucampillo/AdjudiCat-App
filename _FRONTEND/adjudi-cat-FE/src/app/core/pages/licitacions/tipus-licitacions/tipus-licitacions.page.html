@@ -1,0 +1,17 @@
+<app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]="titulo"></app-header-generico>
+<ion-content [fullscreen]="true">
+  <ion-label *ngIf="licitacionsList && licitacionsList.length === 0" lines="none">
+    <p class="resultatBuit">{{ missatgeBuit | translate }}</p>
+  </ion-label>
+  <div class="ofertas-container" *ngIf="licitacionsList">
+    <ion-list lines="none" class="custom-list">
+      <ion-item *ngFor="let contracte of licitacionsList" (click)="anarDetalls(contracte)">
+        <app-tarjeta-contracte [contracte] = "contracte" (favorit)="reloadContractes()"></app-tarjeta-contracte>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll *ngIf="page < totalPages" (ionInfinite)="loadContractes($event, true)" class="custom-infinite-scroll">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" [loadingText]="carregantContractes">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

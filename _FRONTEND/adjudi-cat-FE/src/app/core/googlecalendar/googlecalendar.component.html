@@ -1,0 +1,47 @@
+<app-header-generico backgroundName="fondoRojo" [backButton]="false" [adjudibot]="true" [titulo]="titulo"></app-header-generico>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="gridStyle">
+    <ion-row>
+      <ion-col>
+
+        <div>
+        <ion-spinner id="iframe-spinner" name="crescent" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></ion-spinner>
+        <iframe id="google-calendar-iframe" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no" sandbox="allow-scripts allow-same-origin" src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=Europe%2FMadrid&hl=${this.lang}" (load)="onIframeLoad()"></iframe>
+        </div>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button id="authorize_button" (click)="handleAuthClick()" type="button" color="red" >{{ 'ALERTES.AUTORITZA' | translate }}
+          <ion-icon name="logo-google" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="4" offset="4">
+        <ion-button id="signout_button" (click)="handleSignoutClick()" type="button" color="red" style="visibility: hidden;" >
+          {{ 'ALERTES.SURT' | translate}}
+          <ion-icon name="exit-outline" slot="icon-only"></ion-icon>
+
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+    <div id="content" style="white-space: pre-wrap;"></div>
+
+  <ion-button id="add_event_button" [disabled]="!isUserLoggedIn" (click)="openAddEventModal()" expand="block" color="#c00000" class="AddEvent">{{ 'ALERTES.AFEGIR' | translate }}</ion-button>
+
+  <!-- Google Calendar Embed IFrame -->
+</ion-content>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
+<app-menu [filled]="4"></app-menu>

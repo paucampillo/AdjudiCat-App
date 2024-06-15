@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo3" [backButton]="true" [adjudibot]="false" [titulo]="titulo"></app-header-generico>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="findUsuarisBuscador()" color="light" [placeholder]=cercar class="searchbarStyle"></ion-searchbar>
+
+  <ion-label *ngIf="usuariList && usuariList.length === 0" lines="none">
+    <p class="resultatUsuarisBuit">{{missatgeUsuarisBuit}}</p>
+  </ion-label>
+
+  <div class="ofertas-container" *ngIf="usuariList">
+    <ion-list lines="none" class="custom-list">
+      <ion-grid>
+        <!-- Encabezado de la Tabla -->
+        <ion-row style="padding-bottom: 10px">
+          <ion-col size="3" style="padding-left: 10px; font-weight: bold;">ID</ion-col>
+          <ion-col size="6" style="font-weight: bold;">{{nomUsuari}}</ion-col>
+          <ion-col size="3" style="font-weight: bold;">{{estatUsuari}}</ion-col>
+        </ion-row>
+
+        <!-- Filas de Datos -->
+        <ion-row *ngFor="let usuari of usuariList" style="padding-bottom: 10px">
+          <ion-col size="3" style="padding-left: 10px">{{ usuari.idUsuari }}</ion-col>
+          <ion-col size="6">{{ usuari.nom }}</ion-col>
+          <ion-col size="3">
+            <a (click)="modificarEstadoBloquedo(usuari)">
+              <ion-icon *ngIf="!usuari.bloquejat" name="lock-open" class="lock-open-icon"></ion-icon>
+              <ion-icon *ngIf="usuari.bloquejat" name="lock-closed" class="lock-closed-icon"></ion-icon>
+            </a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>

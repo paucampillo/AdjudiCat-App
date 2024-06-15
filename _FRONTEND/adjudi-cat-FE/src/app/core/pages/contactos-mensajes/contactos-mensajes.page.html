@@ -1,0 +1,54 @@
+<ion-content [fullscreen]="true">
+  <app-header-generico backgroundName="fondoRojo" [backButton]="false" [adjudibot]="true" [titulo]="titulo"></app-header-generico>
+
+  <ion-grid>
+    <ion-row class="search-bar">
+      <ion-col size="11" class="ion-no-padding"><ion-searchbar [(ngModel)]="searchTerm" (ionInput)="findContactesBuscador()" color="light" [placeholder]="buscarContacte" class="searchbarStyle"></ion-searchbar></ion-col>
+      <ion-col size="1" class="ion-no-padding col-trashStyle">
+        <a (click)="mostrarEliminarContactos()">
+           <ion-icon *ngIf="!mostrarEliminar" name="trash" class="trashStyle" size="large"></ion-icon>
+          <ion-icon *ngIf="mostrarEliminar" name="trash" class="red-trashStyle" size="large"></ion-icon>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-label *ngIf="!contactesList" class="llistaContactesBuit">
+    {{ "CONTACTOS_MENSAJES.MISSATGE_LLISTA_CONTACTES_BUIT" | translate }}
+  </ion-label>
+  <div *ngIf="contactesList">
+    <!--Contactos del usuario-->
+    <ion-list *ngIf="!mostrarEliminar" lines="none">
+      <ion-item *ngFor="let contacte of contactesList" (click)="anarMissatge(contacte)">
+        <app-tarjeta-contacte [imagenLogo]="'../../../../assets/icon/LogoGene.png'" [titulo] = contacte.nom></app-tarjeta-contacte>
+      </ion-item>
+    </ion-list>
+    <!--Eliminar contactos del usuario -->
+    <ion-list *ngIf="mostrarEliminar" lines="none">
+      <ion-item *ngFor="let contacte of contactesList">
+        <ion-col size="11" class="ion-no-padding">
+          <app-tarjeta-contacte [imagenLogo]="'../../../../assets/icon/LogoGene.png'" [titulo] = contacte.nom></app-tarjeta-contacte>
+        </ion-col>
+        <ion-col size="1" class="ion-no-padding col-trashStyle">
+          <a (click)="eliminarContacto(contacte)">
+            <ion-icon name="trash" class="red-trashStyle" size="medium"></ion-icon>
+          </a>
+        </ion-col>
+      </ion-item>
+    </ion-list>
+    </div>
+
+      <!--<ion-grid>
+      <ion-col size="10" class="ion-no-padding">
+        <app-tarjeta-contacte [imagenLogo]="'../../../../assets/icon/LogoGene.png'" titulo = "Hola" [ngStyle] = "{'max-width':'50%'}"></app-tarjeta-contacte>
+      </ion-col>
+      <ion-col size="1" class="ion-no-padding col-trashStyle">
+        <a (click)="eliminarContacto()">
+          <ion-icon name="trash" class="red-trashStyle" size="medium"></ion-icon>
+        </a>
+      </ion-col>
+  </ion-grid> -->
+</ion-content>
+
+<app-menu [filled]="3"></app-menu>
+

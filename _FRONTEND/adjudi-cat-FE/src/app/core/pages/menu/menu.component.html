@@ -1,0 +1,61 @@
+<style>
+  ion-tab-bar {
+    --border: none;
+    --background: lightgrey;
+    --color: black;
+
+    border-radius: 10vw 10vw 0 0;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:
+      0 3px 6px 0 rgba(0,0,0,0.04),
+      0 1px 3px 0 rgba(0,0,0,0.02);
+  }
+  ion-label {
+    font-size: 3vw;
+    margin: 0 1px;
+  }
+  ion-tab-bar ion-icon {
+    justify-items: center;
+    font-size: 8vw;
+  }
+</style>
+<ion-tab-bar slot="bottom" class="menu">
+  <ion-tab-button href="/home" [selected]="filled === 1">
+    <ion-icon *ngIf="filled !== 1; else else1" name="search-outline" class="icon"></ion-icon>
+    <ng-template #else1>
+      <ion-icon name="search"></ion-icon>
+    </ng-template>
+    <ion-label>{{ 'MENU.BUSCADOR' | translate }}</ion-label>
+  </ion-tab-button>
+  <ion-tab-button href="/licitacions" [selected]="filled === 2">
+    <ion-icon *ngIf="filled !== 2; else else2" name="receipt-outline"></ion-icon>
+    <ng-template #else2>
+      <ion-icon name="receipt"></ion-icon>
+    </ng-template>
+    <ion-label>{{ 'MENU.LICITACIONS' | translate }}</ion-label>
+  </ion-tab-button>
+  <ion-tab-button [attr.href]="'/contactos-mensajes/' + idUsuari" [selected]="filled === 3">
+    <ion-icon *ngIf="filled !== 3; else else3" name="chatbubbles-outline"></ion-icon>
+    <ng-template #else3>
+      <ion-icon name="chatbubbles"></ion-icon>
+    </ng-template>
+    <ion-label>{{ 'MENU.MISSATGES' | translate }}</ion-label>
+  </ion-tab-button>
+  <ion-tab-button href="/alertes" [selected]="filled === 4">
+    <ion-icon *ngIf="filled !== 4; else else4" name="notifications-outline"></ion-icon>
+    <ng-template #else4>
+      <ion-icon name="notifications"></ion-icon>
+    </ng-template>
+    <ion-label>{{ 'MENU.ALERTES' | translate }}</ion-label>
+  </ion-tab-button>
+  <ion-tab-button href="/profile" [selected]="filled === 5">
+    <ion-icon *ngIf="filled !== 5; else else5" name="person-outline"></ion-icon>
+    <ng-template #else5>
+      <ion-icon name="person"></ion-icon>
+    </ng-template>
+    <ion-label>{{ 'MENU.PERFIL' | translate }}</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
