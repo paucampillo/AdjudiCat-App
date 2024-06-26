@@ -3,7 +3,7 @@
 ## Adjudicat Grup 21L
 
 Projecte realitzat a l'assignatura PES (Projecte d'enginyeria del software) 
-*Nota Total -> 9,5
+*Nota Total -> 9,5*
 
 ### Membres del grup:
 
