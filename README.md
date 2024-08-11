@@ -23,4 +23,4 @@ S'adjunta la documentació per a les inceptions, sprints i memòria.
 ## Informació Tècnica
 
 - El backend està desenvolupat en Java  i Spring.
-- El frontend està desenvolupat en Ionic (TypeScript).
+- El frontend està desenvolupat en Ionic (TypeScript). 
